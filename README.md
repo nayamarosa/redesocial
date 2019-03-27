@@ -25,10 +25,14 @@ Como irá garantir que os usuários utilizem este produto
 
 1ª etapa: foram construídos seis protótipos, três telas pensadas para mobile e três para web.
 
-2ª etapa: escolhemos duas telas de cada para simulação no [Marvel](https://marvelapp.com/).
+ 
 
 
 Link/imagens dos protótipos de baixa fidelidade
+
+
+https://cloudinary.com/ 
+
 
 
 
