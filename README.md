@@ -5,6 +5,14 @@
 ## Definição do produto
 
 O que descobriu sobre o mercado de redes sociais, 
+
+No mundo vitural, espaços de 
+
+Redes sociais, são sites e aplicativos que operam em níveis diversos — como profissional, de relacionamento, dentre outros — mas sempre permitindo o compartilhamento de informações entre pessoas e/ou empresas.
+
+Criado em 1997, o site SixDegrees.com é creditado por muitos como a primeira rede social moderna, pois já permitia que usuários tivessem um perfil e adicionassem outros participantes, em um formato parecido com o que conhecemos hoje.
+
+
 As necessidades dos usuários, 
 Como chegou à definição final de seu produto. 
 
