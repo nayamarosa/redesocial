@@ -1,12 +1,14 @@
 .roboto-font-family{
     font-family: 'Roboto', sans-serif;
+    color:  #101010;
 }
 
 .concert-font-family{
     font-family: 'Concert One', cursive;
+    color:  #101010;
 }
 
-@media screen and (min-width: 360px){
+@media (min-width: 360px){
     h5{
         font-size: 16px;
         margin: 15px 0 20px;
@@ -37,41 +39,11 @@
         align-items: center;
     }
     
-    .form-horizontal{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .form-horizontal .checkbox{
-        padding: 0;
-    }
-    
-    .form-control{
-        width: 250px;
-        height: 40px;
-        color: #707070;
-        border: 1px solid #707070;
-        border-radius: 30px;
-    }
-    
-    .checkbox{
-        display: flex;
-        justify-content: space-around;
-    }
-    
-    .checkbox label{
-        font-size: 12px;
-    }
-    
     .btn-login{
         background-color: #C7E44F;
         width: 180px;
         height: 50px;
         font-size: 26px;
-        border: none;
-        border-radius: 30px;
     }
     
     .register{
