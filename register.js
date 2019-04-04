@@ -9,11 +9,11 @@ function createLogin(event){
     let email = $(".add-email").val();
     let password = $(".add-password").val();
     // console.log(email, password);
-    createUserFirebase(name, email, password);
+    createUserFirebase(email, password);
   }
   
-  function createUserFirebase(name, email, password){
-    firebase.auth().createUserWithEmailAndPassword(name, email, password)
+  function createUserFirebase(email, password){
+    firebase.auth().createUserWithEmailAndPassword(email, password)
     .then(function(response){
       let userId = response.user.uid;
       redirectPosts(userId);
@@ -21,6 +21,10 @@ function createLogin(event){
     .catch(function(error){
       handleError(error);
     });
+  }
+
+  function addUserToDB(){
+    
   }
 
   function handleError(error) {
