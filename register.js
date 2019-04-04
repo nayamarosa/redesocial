@@ -10,18 +10,18 @@ function createUser(event){
   let name = $(".add-name").val();
   let email = $(".add-email").val();
   let password = $(".add-password").val();
-  // console.log(email, password);
-  createUserFirebase(email, password);
+  console.log(name, email, password);
+  createUserFirebase(name, email, password);
 }
 
 function createUserFirebase(name, email, password){
   firebase.auth().createUserWithEmailAndPassword(email, password)
   .then(function(response){
     let userId = response.user.uid;
-    
+
     addUserToDB(userId, name, email);
     
-    redirectUser(userId);
+    redirectPosts(userId);
   })
   .catch(function(error){
     handleError(error);
