@@ -5,14 +5,15 @@ $(document).ready(function(){
 function createLogin(event){
     event.preventDefault();
     
+    let name = $(".add-name").val();
     let email = $(".add-email").val();
     let password = $(".add-password").val();
     // console.log(email, password);
-    createUserFirebase(name, email, password);
+    createUserFirebase(email, password);
   }
   
-  function createUserFirebase(name, email, password){
-    firebase.auth().createUserWithEmailAndPassword(name, email, password)
+  function createUserFirebase(email, password){
+    firebase.auth().createUserWithEmailAndPassword(email, password)
     .then(function(response){
       let userId = response.user.uid;
       redirectPosts(userId);
@@ -22,11 +23,15 @@ function createLogin(event){
     });
   }
 
+  function addUserToDB(){
+    
+  }
+
   function handleError(error) {
     var errorMessage = error.message;
     alert(errorMessage);
 }
 
 function redirectPosts(userId){
-    window.location = "home.html?id=" + userId;
+    window.location = "feed.html?id=" + userId;
 }
