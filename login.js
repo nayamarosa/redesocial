@@ -30,3 +30,5 @@ function handleError(error) {
 function redirectPosts(userId){
     window.location = "feed.html?id=" + userId;
 }
+
+  

@@ -12,6 +12,7 @@ function createUser(event){
   let password = $(".add-password").val();
   console.log(name, email, password);
   createUserFirebase(name, email, password);
+  createProfile(name, email, password)
 }
 
 function createUserFirebase(name, email, password){
@@ -32,6 +33,7 @@ function addUserToDB(id, name, email){
   database.ref("users/" + id).set({
     name: name,
     mail: email
+
   });
 }
 

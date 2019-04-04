@@ -4,7 +4,7 @@ var USER_ID = window.location.search.match(/\?id=(.*)/)[1];
 $(document).ready(function(){
   getPostsfromDB();
   $(".add-posts").click(addPostsClick);
-});
+
    
 function addPostsClick(event) {
   event.preventDefault();
@@ -13,7 +13,6 @@ function addPostsClick(event) {
    $(".posts-input").val("");
    var postsFromDB = addPoststoDB(newPost);
   createListItem(postsFromDB.key, newPost)
-
 }
 
 function addPoststoDB(text){
@@ -48,3 +47,30 @@ function createListItem(key, text) {
 
   })
 }
+
+//----Contador de likes//
+
+// let starCountRef = firebase.database().ref("posts/" + USER_ID + '/starCount');
+
+// $("#botãodelikes").click(function (){
+//   starCountRef.on('value', function(snapshot) {
+//     updateStarCount(postElement, snapshot.val());
+//   });
+
+// });
+
+//botão de logout//
+$("#button-logout").click(signOut);
+    
+function signOut(){
+    firebase.auth().signOut()
+    .then(function() {
+        window.location = "login.html"
+      })
+      .catch(function(error) {
+        console.error('Sign Out Error', error);
+      });
+  };
+  
+
+});
