@@ -7,107 +7,145 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Trocaria-Perfil</title>
   <!--bootstrap-->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
+  <link rel="stylesheet" href="https://bootswatch.com/4/simplex/bootstrap.min.css" />
+
+  <!--css personalizado-->
+
+  <link rel="stylesheet" href="profile.css" />
   <!--google fonts-->
-  <link href="https://fonts.googleapis.com/css?family=Concert+One%7COpen+Sans:400,800" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Concert+One|Roboto" rel="stylesheet">
+
+
 </head>
 
 <body>
-    <div class="container" style="padding-top: 60px;">
-        <h1 class="page-header">Edit Profile</h1>
-        <div class="row">
-          <!-- left column -->
-          <div class="col-md-4 col-sm-6 col-xs-12">
-            <div class="text-center">
-              <img src="http://lorempixel.com/200/200/people/9/" class="avatar img-circle img-thumbnail" alt="avatar">
-              <h6>Upload a different photo...</h6>
-              <input type="file" class="text-center center-block well well-sm">
-            </div>
-          </div>
-          <!-- edit form column -->
-          <div class="col-md-8 col-sm-6 col-xs-12 personal-info">
-            <div class="alert alert-info alert-dismissable">
-              <a class="panel-close close" data-dismiss="alert">×</a> 
-              <i class="fa fa-coffee"></i>
-              This is an <strong>.alert</strong>. Use this to show important messages to the user.
-            </div>
-            <h3>Personal info</h3>
-            <form class="form-horizontal" role="form">
-              <div class="form-group">
-                <label class="col-lg-3 control-label">First name:</label>
-                <div class="col-lg-8">
-                  <input class="form-control" value="Jane" type="text">
-                </div>
-              </div>
-              <div class="form-group">
-                <label class="col-lg-3 control-label">Last name:</label>
-                <div class="col-lg-8">
-                  <input class="form-control" value="Bishop" type="text">
-                </div>
-              </div>
-              <div class="form-group">
-                <label class="col-lg-3 control-label">Company:</label>
-                <div class="col-lg-8">
-                  <input class="form-control" value="" type="text">
-                </div>
-              </div>
-              <div class="form-group">
-                <label class="col-lg-3 control-label">Email:</label>
-                <div class="col-lg-8">
-                  <input class="form-control" value="janesemail@gmail.com" type="text">
-                </div>
-              </div>
-              <div class="form-group">
-                <label class="col-lg-3 control-label">Time Zone:</label>
-                <div class="col-lg-8">
-                  <div class="ui-select">
-                    <select id="user_time_zone" class="form-control">
-                      <option value="Hawaii">(GMT-10:00) Hawaii</option>
-                      <option value="Alaska">(GMT-09:00) Alaska</option>
-                      <option value="Pacific Time (US & Canada)">(GMT-08:00) Pacific Time (US & Canada)</option>
-                      <option value="Arizona">(GMT-07:00) Arizona</option>
-                      <option value="Mountain Time (US & Canada)">(GMT-07:00) Mountain Time (US & Canada)</option>
-                      <option value="Central Time (US & Canada)" selected="selected">(GMT-06:00) Central Time (US & Canada)</option>
-                      <option value="Eastern Time (US & Canada)">(GMT-05:00) Eastern Time (US & Canada)</option>
-                      <option value="Indiana (East)">(GMT-05:00) Indiana (East)</option>
-                    </select>
-                  </div>
-                </div>
-              </div>
-              <div class="form-group">
-                <label class="col-md-3 control-label">Username:</label>
-                <div class="col-md-8">
-                  <input class="form-control" value="janeuser" type="text">
-                </div>
-              </div>
-              <div class="form-group">
-                <label class="col-md-3 control-label">Password:</label>
-                <div class="col-md-8">
-                  <input class="form-control" value="11111122333" type="password">
-                </div>
-              </div>
-              <div class="form-group">
-                <label class="col-md-3 control-label">Confirm password:</label>
-                <div class="col-md-8">
-                  <input class="form-control" value="11111122333" type="password">
-                </div>
-              </div>
-              <div class="form-group">
-                <label class="col-md-3 control-label"></label>
-                <div class="col-md-8">
-                  <input class="btn btn-primary" value="Save Changes" type="button">
-                  <span></span>
-                  <input class="btn btn-default" value="Cancel" type="reset">
-                </div>
-              </div>
-            </form>
+
+
+
+
+  <div class="container">
+   <div class="row">
+      <header>
+          <section class="logo">
+          <img src="trocaria-logo.png" class="img-fluid" alt="TROCARIA">
+          </section>
+      
+        </header>
+    <div class="col-12">
+    <div class="card">
+
+      <div class="card-body">
+      <div class="card-title mb-4">
+        <div class="d-flex justify-content-start">
+        <div class="image-container">
+          <img src="http://placehold.it/150x150" id="imgProfile" style="width: 100px; height: 100px"
+          class="avatar rounded-circle img-fluid img-thumbnail" alt="avatar" />
+          <div class="middle">
+          <input type="button" class="btn btn-secondary concert-font-family" style="font-size: 1rem;" id="btnChangePicture"
+            value="Alterar" />
+          <input type="file" style="display: none;" id="profilePicture" name="file" />
           </div>
         </div>
+
+
+        <div class="userData ml-3">
+          <h2 class="d-block concert-font-family" style="font-size: 2rem;">Joana da Silva </h2>
+          <h6 class="d-block roboto-font-family"><a href="javascript:void(0)">30</a> Produtos para troca</h6>
+          <input type="button" class="btn btn-secondary concert-font-family" style="font-size: 1rem;" id="btn-edit-profile"
+            value="Editar" />
+        </div>
+
+
+        <div class="ml-auto">
+          <input type="button" class="btn btn-primary d-none concert-font-family " id="btnDiscard"
+          value="Discard Changes" />
+        </div>
+        </div>
       </div>
-  
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+      <div class="row">
+        <div class="col-12">
+        <ul class="nav nav-tabs mb-4" id="myTab" role="tablist">
+          <li class="nav-item">
+          <a class="nav-link active font-size: 3rem; concert-font-family" id="basicInfo-tab" data-toggle="tab" href="#basicInfo" role="tab"
+            aria-controls="basicInfo" aria-selected="true"> Perfil </a>
+          </li>
+
+        </ul>
+
+
+        <div class="tab-content ml-1" id="myTabContent">
+          <div class="tab-pane fade show active" id="basicInfo" role="tabpanel" aria-labelledby="basicInfo-tab">
+
+
+          <div class="row">
+            <div class="col-sm-3 col-md-2 col-5 roboto-font-family">
+            <label style="font-weight:bold;">Nome </label>
+            </div>
+            <div class="col-md-8 col-6">
+            nome da pessoa
+            </div>
+          </div>
+          <hr />
+
+          <div class="row">
+            <div class="col-sm-3 col-md-2 col-5">
+            <label style="font-weight:bold;">Aniversário</label>
+            </div>
+            <div class="col-md-8 col-6">
+            <input type="date">
+            </div>
+          </div>
+          <hr />
+
+
+          <div class="row">
+            <div class="col-sm-3 col-md-2 col-5">
+            <label style="font-weight:bold;">Estado</label>
+            </div>
+            <div class="col-md-8 col-6">
+            São Paulo
+            </div>
+          </div>
+          <hr />
+          <div class="row">
+            <div class="col-sm-3 col-md-2 col-5">
+            <label style="font-weight:bold;">Celular</label>
+            </div>
+            <div class="col-md-8 col-6">
+            <input type="tel"> 
+            </div>
+          </div>
+          <hr />
+          </div>
+
+        </div>
+        </div>
+      </div>
+
+
+      </div>
+
+    </div>
+    </div>
+  </div>
+  </div>
+
+
+  <!--scripts-->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+  integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+  crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+  integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+  crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+  integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+  crossorigin="anonymous"></script>
+
+  <script src="profile.js"></script>
+
 </body>
+
 </html>
