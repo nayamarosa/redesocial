@@ -5,6 +5,7 @@ $(document).ready(function(){
 function createLogin(event){
     event.preventDefault();
     
+    let name = $(".add-name").val();
     let email = $(".add-email").val();
     let password = $(".add-password").val();
     // console.log(email, password);
@@ -28,5 +29,5 @@ function createLogin(event){
 }
 
 function redirectPosts(userId){
-    window.location = "home.html?id=" + userId;
+    window.location = "feed.html?id=" + userId;
 }
