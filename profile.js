@@ -3,18 +3,21 @@ const USER_ID = window.location.search.match(/\?id=(.*)/)[1];
 
 
 
-$(document).ready(function () {
+$(document).ready(function createProfile(name, email, password) {
+  
+  
 
-  function writeUserData(USER_ID, name, email, imageUrl) {
-    firebase.database().ref('profile/' + userId).set({
-      birthdate: Date
-      city: textCity
-      email: email 
-      phone: phone
-      profile_picture: imageUrl
-      password: password 
-      username: name
-    });
+
+  // function writeUserData(USER_ID) {
+  //   firebase.database().ref('profile/' + USER_ID).set({
+  //     birthdate: Date
+  //     city: textCity
+  //     email: email 
+  //     phone: phone
+  //     profile_picture: imageUrl
+  //     password: password 
+  //     username: name
+  //   });
   }
 
 //a partir daqui são os comandos para troca de img de avatar//
