@@ -6,4 +6,5 @@ var config = {
   storageBucket: "trocaria-11.appspot.com",
   messagingSenderId: "251335613869"
 };
+
 firebase.initializeApp(config);
