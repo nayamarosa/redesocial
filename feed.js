@@ -48,6 +48,27 @@ function createListItem(key, text) {
   })
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//início da zona da ana//
+
 //----Contador de likes//
 
 // let starCountRef = firebase.database().ref("posts/" + USER_ID + '/starCount');
@@ -74,3 +95,48 @@ function signOut(){
   
 
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//fim da zona da ana// 
+//início da zona da nay//
+
