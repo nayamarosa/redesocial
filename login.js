@@ -1,5 +1,7 @@
 $(document).ready(function(){
     $(".btn-login").click(enterLogin);
+    $("#checkbox-reminder").click(authPersistence);
+
 });
 
 function enterLogin(event){
@@ -23,7 +25,7 @@ function loginUserFirebase(email, password){
 }
 
 function handleError(error) {
-    var errorMessage = error.message;
+    let errorMessage = error.message;
     alert(errorMessage);
 }
 
@@ -46,11 +48,16 @@ function redirectPosts(userId){
 
 
 
-
 //persistência da autenticação( quando o usuário aciona a caixa de lembrar login)//
 
-
-
-
-${"#checkbox-reminder"}.checkbox
+function authPersistence() {
+    firebase.auth().setPersistence(firebase.auth.Auth.Persistence.LOCAL)
+  .then(function() {
+      return firebase.auth().signInWithEmailAndPassword(email, password);
+  })
+  .catch(function(error) {
+    let errorCode = error.code;
+    let errorMessage = error.message;
+  });
+}
   
