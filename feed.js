@@ -1,5 +1,5 @@
-var database = firebase.database();
-var USER_ID = window.location.search.match(/\?id=(.*)/)[1];
+const database = firebase.database();
+const USER_ID = window.location.search.match(/\?id=(.*)/)[1];
 
 $(document).ready(function(){
   getPostsfromDB();
@@ -8,10 +8,10 @@ $(document).ready(function(){
    
 function addPostsClick(event) {
   event.preventDefault();
-
-   var newPost = $(".posts-input").val();
+ 
+   let newPost = $(".posts-input").val();
    $(".posts-input").val("");
-   var postsFromDB = addPoststoDB(newPost);
+   let postsFromDB = addPoststoDB(newPost);
   createListItem(postsFromDB.key, newPost)
 }
 
@@ -19,14 +19,14 @@ function addPoststoDB(text){
   return database.ref("/posts/" + USER_ID).push({
     text: text
   });
-}
+ }
 
 function getPostsfromDB() {
   database.ref('/posts/' + USER_ID).once('value')
   .then(function(snapshot){
     snapshot.forEach(function(childSnapshot) {
-      var childKey = childSnapshot.key;
-      var childData = childSnapshot.val();
+      let childKey = childSnapshot.key;
+      let childData = childSnapshot.val();
 
       createListItem(childKey, childData.text);
       // console.log("chave:", childKey);
@@ -44,7 +44,7 @@ function createListItem(key, text) {
    $(`input[data-post-id="${key}"]`).click(function() {
     database.ref("posts/" + USER_ID + "/" + key).remove();
     $(this).parent().remove();
-
+    
   })
 }
 
