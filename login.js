@@ -31,4 +31,26 @@ function redirectPosts(userId){
     window.location = "feed.html?id=" + userId;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//persistência da autenticação( quando o usuário aciona a caixa de lembrar login)//
+
+
+
+
+${"#checkbox-reminder"}.checkbox
   
