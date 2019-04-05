@@ -30,7 +30,7 @@ function handleError(error) {
 }
 
 function redirectPosts(userId){
-    window.location = "../html/feed.html?id=" + userId;
+    window.location = "/public/html/feed.html?id=" + userId;
 }
 
 
