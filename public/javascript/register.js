@@ -43,5 +43,5 @@ function handleError(error) {
 }
 
 function redirectPosts(userId){
-  window.location = "/public/html/feed.html?id=" + userId;
+  window.location = "../feed.html?id=" + userId;
 }
