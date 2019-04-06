@@ -12,7 +12,9 @@ $(document).ready(function(){
     let newPost = $(".posts-input").val();
     $(".posts-input").val("");
     let postsFromDB = addPoststoDB(newPost);
-    createListItem(postsFromDB.key, newPost)
+    createPostList(postsFromDB.key, newPost);
+
+    $('#add-post-modal').modal('hide')
   }
   
   function addPoststoDB(text){
@@ -28,28 +30,40 @@ $(document).ready(function(){
         let childKey = childSnapshot.key;
         let childData = childSnapshot.val();
         
-        createListItem(childKey, childData.text);
+        createPostList(childKey, childData.text);
         // console.log("chave:", childKey);
         // console.log("chave:", childData);
+removePosts()
+
       });
     });
   }
   
-  function createListItem(key, text) {
+  function createPostList(key, text) {
     $(".posts-list").append(`
     <li>
-    <input type="checkbox"data-post-id=${key} />
     <span>${text}</span>
+    <i data-toggle="modal" class="remove-modal" data-id=${key} data-target="#remove-post-modal">EXCLUIR</i>
     </li> `);
-    $(`input[data-post-id="${key}"]`).click(function() {
-      database.ref("posts/" + USER_ID + "/" + key).remove();
-      $(this).parent().remove();
+  }
+
+  function removePosts(){
+    $(".remove-modal").click(function() {
+
+      let key = $(this).data("id");
+      removePostsTwo(key);
       
     })
+    function removePostsTwo(key){
+      $(".remove-post").click(function(){
+        $("i[data-id='"+ key + "']").parent().remove();   
+        database.ref("posts/" + USER_ID + "/" + key).remove();
+
+        $('#remove-post-modal').modal('hide')
+      })
+    }
   }
-  
-  
-  
+
   
   
   
