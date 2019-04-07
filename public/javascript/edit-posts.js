@@ -1,0 +1,1 @@
+const database = firebase.database();

@@ -4,8 +4,7 @@ const USER_ID = window.location.search.match(/\?id=(.*)/)[1];
 $(document).ready(function(){
   getPostsfromDB();
   $(".add-posts").click(addPostsClick);
-  
-  
+
   function addPostsClick(event) {
     event.preventDefault();
     
@@ -31,10 +30,6 @@ $(document).ready(function(){
         let childData = childSnapshot.val();
         
         createPostList(childKey, childData.text);
-        // console.log("chave:", childKey);
-        // console.log("chave:", childData);
-removePosts()
-
       });
     });
   }
@@ -44,12 +39,15 @@ removePosts()
     <li>
     <span>${text}</span>
     <i data-toggle="modal" class="remove-modal" data-id=${key} data-target="#remove-post-modal">EXCLUIR</i>
+    <i data-toggle="modal" class="update-modal" data-id=${key} data-target="#update-post-modal">EDITAR</i>
     </li> `);
-  }
 
+    removePosts();
+  }
+  
   function removePosts(){
     $(".remove-modal").click(function() {
-
+      
       let key = $(this).data("id");
       removePostsTwo(key);
       
@@ -58,12 +56,31 @@ removePosts()
       $(".remove-post").click(function(){
         $("i[data-id='"+ key + "']").parent().remove();   
         database.ref("posts/" + USER_ID + "/" + key).remove();
-
+        
         $('#remove-post-modal').modal('hide')
       })
     }
   }
 
+  // function updatePosts(){
+  //   $(".update-modal").click(function() {
+
+  //     $("input[name=posts-update]").val()
+      
+  //     let key = $(this).data("id");
+  //     updatePostsTwo(key);
+      
+  //   })
+  //   function updatePostsTwo(key){
+  //     $(".update-post").click(function(){
+  //       $("i[data-id='"+ key + "']").parent().update();   
+  //       database.ref("posts/" + USER_ID + "/" + key).update();
+        
+  //       $('#remove-post-modal').modal('hide')
+  //     })
+  //   }
+  // }
+  
   
   
   
