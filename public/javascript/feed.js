@@ -38,8 +38,8 @@ $(document).ready(function(){
     $(".posts-list").append(`
     <li>
     <span>${text}</span>
-    <i data-toggle="modal" class="remove-modal" data-id=${key} data-target="#remove-post-modal">EXCLUIR</i>
     <i data-toggle="modal" class="update-modal" data-id=${key} data-target="#update-post-modal">EDITAR</i>
+    <i data-toggle="modal" class="remove-modal" data-id=${key} data-target="#remove-post-modal">EXCLUIR</i>
     </li> `);
     
     removePosts();
