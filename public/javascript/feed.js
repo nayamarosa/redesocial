@@ -12,7 +12,7 @@ $(document).ready(function(){
     $(".posts-input").val("");
     let postsFromDB = addPoststoDB(newPost);
     createPostList(postsFromDB.key, newPost);
-    
+
     $('#add-post-modal').modal('hide')
   }
   
