@@ -42,25 +42,35 @@ firebase.initializeApp(config)</script> -->
     </section>
   </header>
   
-  <form class="container d-flex flex-column align-items-center form-style">
-    <h5 class="concert-font-family margin-g">FAÇA SEU LOGIN</h5>
-    <div class="form-group margin-g">
-      <input type="email" class="form-control rounded-pill login-email roboto-font-family font-p form-input-size" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="E-mail">
+  <section class="container d-flex align-items-center login-style">
+    <div class="image-about">
+      <h3 class="concert-font-family">AQUI VAI UM TEXTO LEGAL QUE VAMOS ESCREVER DEPOIS</h3>
+      <figure>
+        <img src="img-1.png" alt="" srcset="">
+      </figure>
     </div>
-    <div class="form-group margin-p">
-      <input type="password" class="form-control rounded-pill login-password roboto-font-family font-p form-input-size" id="exampleInputPassword1" placeholder="Senha">
-    </div>
-    <div class="form-group d-flex justify-content-between form-check margin-g form-input-size">
-      <input type="checkbox" class="form-check-input" id="checkbox-reminder">
-      <label class="form-check-label roboto-font-family font-p" for="exampleCheck1">Lembrar login</label>
-      <p class="roboto-font-family font-p"><u>Esqueci a senha</u></p>
-    </div>
-    <button type="submit" class="btn btn-primary rounded-pill border-0 btn-login concert-font-family margin-p font-gg">ENTRAR</button>
-    <section class="register roboto-font-family font-p">
-      <p>Ainda não tem conta?</p>
-      <p data-toggle="modal" data-target="#myModal"><u>CADASTRE-SE</u></p>
-    </section>
-  </form>
+    
+    <form class="container d-flex flex-column align-items-center form-style">
+      <h5 class="concert-font-family margin-g">FAÇA SEU LOGIN</h5>
+      <div class="form-group margin-g">
+        <input type="email" class="form-control rounded-pill login-email roboto-font-family font-p form-input-size" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="E-mail">
+      </div>
+      <div class="form-group margin-p">
+        <input type="password" class="form-control rounded-pill login-password roboto-font-family font-p form-input-size" id="exampleInputPassword1" placeholder="Senha">
+      </div>
+      <div class="form-group d-flex justify-content-between form-check margin-g form-input-size">
+        <input type="checkbox" class="form-check-input" id="checkbox-reminder">
+        <label class="form-check-label roboto-font-family font-p" for="checkbox-reminder">Lembrar login</label>
+        <p class="roboto-font-family font-p"><u>Esqueci a senha</u></p>
+      </div>
+      <button type="submit" class="btn btn-primary rounded-pill border-0 btn-login concert-font-family margin-p font-gg">ENTRAR</button>
+      <section class="register roboto-font-family font-p">
+        <p>Ainda não tem conta?</p>
+        <p data-toggle="modal" data-target="#myModal"><u>CADASTRE-SE</u></p>
+      </section>
+    </form>
+    
+  </section>
   
   <!-- modal -->
   <div class="modal fade modal-style" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
