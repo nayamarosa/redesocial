@@ -4,22 +4,35 @@ const USER_ID = window.location.search.match(/\?id=(.*)/)[1];
 $(document).ready(function(){
   getPostsfromDB();
   $(".add-posts").click(addPostsClick);
+  $(".select-options").change(filterBySelectOptions);
+  
+  function filterBySelectOptions() {
+     var selectedOption = database.ref("/posts/" + USER_ID).orderByChild("selectOptions");
+     return selectedOption;
+}
   
   function addPostsClick(event) {
     event.preventDefault();
     
     let newPost = $(".posts-input").val();
     $(".posts-input").val("");
+
     let postsFromDB = addPoststoDB(newPost);
     let favInitial = 0;
     createPostList(postsFromDB.key, newPost, favInitial);
 
+    let selectOptions = $(".select-options").val();
+    let postsFromDB = addPoststoDB(newPost, selectOptions);
+    createPostList(postsFromDB.key, newPost);
+
+
     $('#add-post-modal').modal('hide')
   }
   
-  function addPoststoDB(text){
+  function addPoststoDB(text, select){
     return database.ref("/posts/" + USER_ID).push({
       text: text,
+      selectOptions: select,
       fav:0
     });
   }
@@ -37,6 +50,8 @@ $(document).ready(function(){
   }
   
   function createPostList(key, text, fav) {
+  function createPostList(key, text) {
+
     $(".posts-list").append(`
     <li>
     <span>${text}</span>
