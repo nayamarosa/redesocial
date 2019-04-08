@@ -10,69 +10,148 @@
     margin: 0;
 }
 
-.margin-p{
-    margin: 0 0 10px;
-}
+@media (min-width: 200px) and (max-width: 759px){
+    .font-p{
+        font-size: 12px;
+    }
+    
+        .font-m{
+            font-size: 18px;
+        }
+    
+        .font-g{
+        font-size: 26px;
+        }
+    
+        .logo{
+            background-color: #D5EC76;
+            width: 100%;
+            height: 150px;
+        }
+        
+        .logo img{
+            width: 50%;
+        }
+        
+        .social-login{
+            background-color: #C7E44F;
+            width: 100%;
+            height: 100px;
+            margin-bottom: 12%;
+        }
+    
+        .image-about{
+            width: 60%;
+        }
+        
+        .form-style{
+            width: 70%;   
+        }
+    
+        .form-input-size{
+            width: 250px;
+        }
+        
+        .btn-login{
+            background-color: #C7E44F;
+            width: 180px;
+            height: 50px;
+        }
+    
+        .btn-login:hover{
+            background-color: #CCCCCC;
+        }
+            
+        .checkin{
+            cursor: pointer;
+        }
+    
+        .btn-create{
+            background-color: #C7E44F;
+            width: 180px;
+            height: 50px;
+        }
+    
+        .btn-create:hover{
+            background-color: #CCCCCC;
+        }
+        
+        .btn-back{
+            background-color: #CCCCCC;
+            width: 100px;
+            height: 35px;
+        }
+    
+        .btn-back:hover{
+            background-color: #B5D532;
+        }
+        
+        .footer-style{
+            background-color: #D5EC76;
+            width: 100%;
+            height: 40px;
+            display: flex;
+            justify-content: space-evenly;
+            padding: 12px;
+            position: fixed;
+            bottom: 0;
+        }
+    }
 
-.margin-m{
-    margin: 0 0 15px;
-}
-
-.margin-g{
-    margin: 0 0 20px;
-}
-
-.margin-gg{
-    margin: 0 0 30px;
-}
-
-.font-p{
+@media (min-width: 760px){
+    .font-p{
     font-size: 12px;
 }
 
-.font-m{
-    font-size: 16px;
-}
+    .font-m{
+        font-size: 18px;
+    }
 
-.font-g{
-    font-size: 20px;
-}
-
-.font-gg{
+    .font-g{
     font-size: 26px;
-}
-
-@media (min-width: 360px){
-    body{
-        height: calc(100vh - 40px);
-        display: flex;
-        flex-direction: column;
     }
-    
+
     .logo{
         background-color: #D5EC76;
-        height: 160px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        height: 80px;
     }
     
     .logo img{
-        width: 300px;
+        width: 20%;
     }
-    
-    .form-style{
-        margin: auto 0;
+
+    .header-style{
+        display: flex;
+        height: 120px;
+    }
+
+    .text-header{
+        background-color: #B5D532;
+        width: 60%;
     }
     
     .social-login{
         background-color: #C7E44F;
-        height: 115px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        width: 40%;
+    }
+
+    .login-style{
+        margin-top: 5%;
+    }
+
+    .image-about{
+        width: 60%;
+        text-align: center;
+    }
+
+    .image-about img{
+        width: 80%;
     }
     
+    .form-style{
+        width: 40%;   
+    }
+
     .form-input-size{
         width: 250px;
     }
@@ -82,98 +161,33 @@
         width: 180px;
         height: 50px;
     }
-    
-    .modal-style{
-        top: 150px;
-    }
-    
-    .register{
-        display:flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .register p{
-        margin: 0;
-    }
-    
-    .btn-back{
-        background-color: #CCCCCC;
-        width: 100px;
-        height: 35px;
-    }
-    
-    .footer-style{
-        background-color: #D5EC76;
-        width: 100%;
-        height: 40px;
-        display: flex;
-        justify-content: space-evenly;
-        padding: 12px;
-        position: fixed;
-        bottom: 0;
-    }
-}
 
-@media (min-width: 992px){
-    body{
-        height: calc(100vh - 40px);
-        display: flex;
-        flex-direction: column;
+    .btn-login:hover{
+        background-color: #CCCCCC;
     }
-    
-    .logo{
-        background-color: #D5EC76;
-        height: 160px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        
+    .checkin{
+        cursor: pointer;
     }
-    
-    .logo img{
-        width: 300px;
-    }
-    
-    .form-style{
-        margin: auto 0;
-    }
-    
-    .social-login{
-        background-color: #C7E44F;
-        height: 115px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    .form-input-size{
-        width: 250px;
-    }
-    
-    .btn-login{
+
+    .btn-create{
         background-color: #C7E44F;
         width: 180px;
         height: 50px;
     }
-    
-    .modal-style{
-        top: 150px;
-    }
-    
-    .register{
-        display:flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .register p{
-        margin: 0;
+
+    .btn-create:hover{
+        background-color: #CCCCCC;
     }
     
     .btn-back{
         background-color: #CCCCCC;
         width: 100px;
         height: 35px;
+    }
+
+    .btn-back:hover{
+        background-color: #B5D532;
     }
     
     .footer-style{
