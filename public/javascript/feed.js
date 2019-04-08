@@ -4,6 +4,12 @@ const USER_ID = window.location.search.match(/\?id=(.*)/)[1];
 $(document).ready(function(){
   getPostsfromDB();
   $(".add-posts").click(addPostsClick);
+  $(".select-options").change(filterBySelectOptions);
+  
+  function filterBySelectOptions() {
+     var selectedOption = database.ref("/posts/" + USER_ID).orderByChild("selectOptions");
+     return selectedOption;
+}
   
   function addPostsClick(event) {
     event.preventDefault();
@@ -36,7 +42,7 @@ $(document).ready(function(){
       });
     });
   }
-  
+
   function createPostList(key, text) {
     $(".posts-list").append(`
     <li>
