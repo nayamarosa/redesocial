@@ -110,64 +110,63 @@
   .font-g{
     font-size: 26px;
   }
-
+  
   .navbar-style{
     background-color: #D5EC76;
     height: 60px;
   }
   
-  .logo{
-    width: 40%;
-    }
+  /* .logo{
+    width: 200px;
+  } */
   
-  .navbar-style img{
-    width: 50%;
+  .logo img{
+    width: 12rem;
   }
   
-  .header-style{
+  /* .form-navbar{
     display: flex;
-    height: 120px;
+    justify-content: space-evenly;
+  } */
+  /*   
+  .navbar-icons{
+    display: inline;
+  } */
+  
+  .navbar-icons img{
+    width: 100%;
   }
   
-  .text-header{
-    background-color: #B5D532;
-    width: 60%;
-  }
-  
-  .social-login{
+  .btn-new-post{
     background-color: #C7E44F;
-    width: 40%;
-  }
-  
-  .login-style{
-    margin-top: 5%;
-  }
-  
-  .image-about{
     width: 60%;
-    text-align: center;
+    height: 50px;
   }
   
-  .image-about img{
-    width: 80%;
+  .btn-new-post:hover{
+    background-color: #CCCCCC;
+  }
+
+  .textarea-style{
+    resize: none;
+    width: 400px;
+    height: 150px;
   }
   
-  .form-style{
-    width: 40%;   
-  }
-  
-  .form-input-size{
-    width: 250px;
-  }
-  
-  .btn-login{
+  .add-posts{
     background-color: #C7E44F;
     width: 180px;
     height: 50px;
   }
   
-  .btn-login:hover{
+  .add-posts:hover{
     background-color: #CCCCCC;
+  }
+  
+  .cancel-add-posts{
+    background-color: #CCCCCC;
+    width: 100px;
+    height: 35px;
   }
   
   .checkin{
