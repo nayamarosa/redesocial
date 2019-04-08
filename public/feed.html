@@ -56,6 +56,12 @@
   </header>
   
   <main>
+     <form>
+          <select name="menu" class="select-options">
+            <option value="public" class" post-public">Público</option>
+            <option value="private" class="post-private">Privado</option>
+          </select>
+        </form>
     <section>
       <ul class="posts-list"></ul>
     </section>
@@ -81,55 +87,64 @@
               <button type="button" class="btn btn-secondary rounded-pill border-0 mb-3 cancel-add-posts concert-font-family font-m" data-dismiss="modal">FECHAR</button>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
-    
-  </main>
-  
-  
-  
-  
-  <section>
-    <!-- Modal -->
-    <div class="modal fade" id="remove-post-modal" tabindex="-1" role="dialog" aria-labelledby="remove-post-modalLabel" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="remove-post-modalLabel">REMOVER POST</h5>
+        </section>
+
+
+
+
+        <section>
+          <!-- Modal -->
+          <div class="modal fade" id="remove-post-modal" tabindex="-1"
+            role="dialog" aria-labelledby="remove-post-modalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="remove-post-modalLabel">REMOVER
+                    POST</h5>
+                </div>
+                <div class="modal-body">
+                  <h5>Tem certeza que deseja remover este post?</h5>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary"
+                    data-dismiss="modal">CANCELAR</button>
+                  <button type="button" class="btn btn-primary remove-post">REMOVER</button>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="modal-body">
-            <h5>Tem certeza que deseja remover este post?</h5>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">CANCELAR</button>
-            <button type="button" class="btn btn-primary remove-post">REMOVER</button>
+        </section>
+
+
+        <section>
+          <!-- Modal -->
+          <div class="modal fade" id="update-post-modal" tabindex="-1"
+            role="dialog" aria-labelledby="update-post-modalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="update-post-modalLabel">EDITAR
+                    POST</h5>
+                </div>
+                <div class="modal-body">
+                  <textarea id="update-post" name="posts-update"
+                    class="posts-input textarea-style" cols="30" rows="10"></textarea>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary"
+                    data-dismiss="modal">CANCELAR</button>
+                  <button type="button" class="btn btn-primary update-post">SALVAR</button>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
-  
-  
-  <section>
-    <!-- Modal -->
-    <div class="modal fade" id="update-post-modal" tabindex="-1" role="dialog" aria-labelledby="update-post-modalLabel" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="update-post-modalLabel">EDITAR POST</h5>
-          </div>
-          <div class="modal-body">
-            <textarea id="update-post" name="posts-update" class="posts-input textarea-style" cols="30" rows="10"></textarea>              
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">CANCELAR</button>
-            <button type="button" class="btn btn-primary update-post">SALVAR</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+    </main>
   
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
@@ -138,5 +153,8 @@
   <script src="javascript/remove-posts.js"></script>
   <script src="javascript/edit-posts.js"></script>
   <script src="javascript/feed.js"></script>
+  <script src="javascript/fav-posts.js"></script>
+
 </body>
 </html>
+
