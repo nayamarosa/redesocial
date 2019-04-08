@@ -10,15 +10,18 @@ $(document).ready(function(){
     
     let newPost = $(".posts-input").val();
     $(".posts-input").val("");
-    let postsFromDB = addPoststoDB(newPost);
+    let selectOptions = $(".select-options").val();
+    let postsFromDB = addPoststoDB(newPost, selectOptions);
     createPostList(postsFromDB.key, newPost);
 
     $('#add-post-modal').modal('hide')
   }
   
-  function addPoststoDB(text){
+  function addPoststoDB(text, select){
     return database.ref("/posts/" + USER_ID).push({
-      text: text
+      text: text,
+      selectOptions: select,
+
     });
   }
   
