@@ -10,43 +10,43 @@
     margin: 0;
 }
 
-@media (min-width: 200px) and (max-width: 779px){
+.margin-p{
+    margin: 0 0 10px;
+}
+
+.margin-m{
+    margin: 0 0 15px;
+}
+
+.margin-g{
+    margin: 0 0 20px;
+}
+
+.margin-gg{
+    margin: 0 0 30px;
+}
+
+.font-p{
+    font-size: 12px;
+}
+
+.font-m{
+    font-size: 16px;
+}
+
+.font-g{
+    font-size: 20px;
+}
+
+.font-gg{
+    font-size: 26px;
+}
+
+@media (min-width: 360px){
     body{
-        /* height: calc(100vh - 40px); */
+        height: calc(100vh - 40px);
         display: flex;
         flex-direction: column;
-    }
-    
-    .margin-p{
-        margin: 0 0 10px;
-    }
-    
-    .margin-m{
-        margin: 0 0 15px;
-    }
-    
-    .margin-g{
-        margin: 0 0 20px;
-    }
-    
-    .margin-gg{
-        margin: 0 0 30px;
-    }
-    
-    .font-p{
-        font-size: 12px;
-    }
-    
-    .font-m{
-        font-size: 16px;
-    }
-    
-    .font-g{
-        font-size: 20px;
-    }
-    
-    .font-gg{
-        font-size: 26px;
     }
     
     .logo{
@@ -61,8 +61,8 @@
         width: 300px;
     }
     
-    .image-about{
-        display: none;
+    .form-style{
+        margin: auto 0;
     }
     
     .social-login{
@@ -71,10 +71,6 @@
         display: flex;
         justify-content: center;
         align-items: center;
-    }
-    
-    .form-style{
-        margin: auto 0;
     }
     
     .form-input-size{
@@ -119,81 +115,37 @@
     }
 }
 
-@media (min-width: 780px){
-    /* body{
+@media (min-width: 992px){
+    body{
         height: calc(100vh - 40px);
         display: flex;
         flex-direction: column;
-    } */
-    
-    .margin-p{
-        margin: 0 0 15px;
-    }
-    
-    .margin-m{
-        margin: 0 0 20px;
-    }
-    
-    .margin-g{
-        margin: 0 0 30px;
-    }
-    
-    .margin-gg{
-        margin: 0 0 40px;
-    }
-    
-    .font-p{
-        font-size: 16px;
-    }
-    
-    .font-m{
-        font-size: 24px;
-    }
-    
-    .font-g{
-        font-size: 30px;
-    }
-    
-    .font-gg{
-        font-size: 26px;
     }
     
     .logo{
         background-color: #D5EC76;
-        height: 80px;
+        height: 160px;
         display: flex;
         justify-content: center;
         align-items: center;
     }
     
     .logo img{
-        width: 260px;
+        width: 300px;
+    }
+    
+    .form-style{
+        margin: auto 0;
     }
     
     .social-login{
         background-color: #C7E44F;
-        width: 500px;
-        height: 130px;
-        float: right;
+        height: 115px;
         display: flex;
         justify-content: center;
         align-items: center;
     }
-
-    .image-about{
-        display: inline;
-    }
-
-    .image-about img{
-        width: 600px;
-        display: inline-block;
-    }
     
-    .form-style{
-        width: 500px;
-        margin: 0;     
-    }
-
     .form-input-size{
         width: 250px;
     }
