@@ -2,7 +2,7 @@ function updatePosts(){
   let message;
   $(".update-modal").click(function() {
     
-    $("#update-post").val($(this).prev().text());
+    $("#update-post").val($(this).prev().prev().text());
     message = $(this).prev();
     
     let key = $(this).data("id");

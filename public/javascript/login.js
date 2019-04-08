@@ -47,7 +47,6 @@ function redirectPosts(userId){
 
 
 
-
 //persistência da autenticação( quando o usuário aciona a caixa de lembrar login)//
 
 function authPersistence() {
