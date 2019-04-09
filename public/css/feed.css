@@ -115,31 +115,35 @@
     background-color: #D5EC76;
     height: 60px;
   }
-  
-  /* .logo{
-    width: 200px;
+
+  /* .logo-feed{
+    width: 35%;
   } */
-  
-  .logo img{
-    width: 12rem;
+
+  .logo-feed img{
+    width: 180px;
   }
   
   /* .form-navbar{
-    display: flex;
-    justify-content: space-evenly;
-  } */
-  /*   
-  .navbar-icons{
-    display: inline;
+    width: 50%;
   } */
   
   .navbar-icons img{
-    width: 100%;
+    width: 40px;
+  }
+
+  .aside-content{
+    background-color: #C7E44F;
+    /* width: 20%; */
+  }
+
+  .select-options{
+    float: right;
   }
   
   .btn-new-post{
     background-color: #C7E44F;
-    width: 60%;
+    width: 80%;
     height: 50px;
   }
   
