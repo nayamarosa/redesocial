@@ -16,9 +16,10 @@ $(document).ready(function(){
     
     let newPost = $(".posts-input").val();
     $(".posts-input").val("");
-    let selectOptions = $(".select-options").val();
+    let selectOptions = $("#select-options option:selected").val();
     let postsFromDB = addPoststoDB(newPost, selectOptions);
     createPostList(postsFromDB.key, newPost);
+    console.log(selectOptions);
 
     $('#add-post-modal').modal('hide')
   }
