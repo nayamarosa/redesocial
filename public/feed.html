@@ -77,21 +77,27 @@
       <section>
         <!-- Modal Post -->
         <div class="modal fade" id="add-post-modal" tabindex="-1" role="dialog" aria-labelledby="add-post-modalLabel" aria-hidden="true">
-          <div class="modal-dialog" role="document">
+          <div class=".modal-dialog" role="document">
             <div class="modal-content container d-flex flex-column align-items-center">
+
               <div class="modal-header">
                 <h5 class="concert-font-family" id="add-post-modalLabel">O que você gostaria de trocar ou doar?</h5>
               </div>
+
               <div class="modal-body">
-                <textarea name="posts-input" class="posts-input textarea-style"></textarea>
-                <select name="select" class="option-selected">
+                <textarea name="posts-input" class="posts-input form-control"></textarea>
+              </div>
+
+              <div>
+                <select name="select" class="btn btn-outline-secondary dropdown-toggle option-selected ">
                   <option value="public" class="post-public">Público</option>
-                  <option value="private" class="post-private">Privado</option>
+                  <option value="private" class="post-private">Privado</option>        
                 </select>
               </div>
+
               <div class="d-flex flex-column align-items-center">
-                <button type="button" class="btn btn-primary rounded-pill border-0 mb-3 add-posts concert-font-family font-g">POSTAR</button>
-                <button type="button" class="btn btn-secondary rounded-pill border-0 mb-3 cancel-add-posts concert-font-family font-m" data-dismiss="modal">FECHAR</button>
+                <button type="button" class="btn rounded-pill border-0 mb-3  concert-font-family font-g">POSTAR</button>
+                <button type="button" class="btn rounded-pill border-0 mb-3 concert-font-family font-m" data-dismiss="modal">FECHAR</button>
               </div>
             </div>
           </div>
@@ -99,6 +105,8 @@
       </section>
       
       <section>
+
+
         <!-- Modal Remove -->
         <div class="modal fade" id="remove-post-modal" tabindex="-1"
         role="dialog" aria-labelledby="remove-post-modalLabel"
