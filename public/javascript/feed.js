@@ -16,6 +16,12 @@ $(document).ready(function(){
     
     let newPost = $(".posts-input").val();
     $(".posts-input").val("");
+    let selectOptions = $("#select-options option:selected").val();
+    let postsFromDB = addPoststoDB(newPost, selectOptions);
+    createPostList(postsFromDB.key, newPost);
+    console.log(selectOptions);
+
+
     
     // let postsFromDB = addPoststoDB(newPost);
     // let favInitial = 0;
@@ -24,8 +30,7 @@ $(document).ready(function(){
     // let selectOptions = $(".select-options").val();
     // let postsFromDB = addPoststoDB(newPost, selectOptions);
     // createPostList(postsFromDB.key, newPost);
-    
-    
+
     $('#add-post-modal').modal('hide')
   }
   
