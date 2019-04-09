@@ -4,11 +4,24 @@ const USER_ID = window.location.search.match(/\?id=(.*)/)[1];
 $(document).ready(function(){
   getPostsfromDB();
   $(".add-posts").click(addPostsClick);
-  $(".select-options").change(filterBySelectOptions);
+  $(".order-select-options").change(filterBySelectOptions);
   
   function filterBySelectOptions() {
-    var selectedOption = database.ref("/posts/" + USER_ID).orderByChild("selectOptions");
-    return selectedOption;
+    $(".posts-list").html("");
+    let ref = firebase.database().ref("post/" + USER_ID);
+    console.log(ref);
+        ref.orderByChild("selectOptions").equalTo('private').once('value').then(function (snapshot) {
+            console.log(snapshot.val())
+            // .forEach(function (childSnapshot) {
+            //     let childKey = childSnapshot.key;
+            //     console.log(childKey);
+            //     let childData = childSnapshot.val();
+            //     createPostList(childKey, childData.text);
+            // });
+        }).catch(function (error){
+          console.log(error);
+        } )
+
   }
   
   function addPostsClick(event) {
@@ -16,20 +29,10 @@ $(document).ready(function(){
     
     let newPost = $(".posts-input").val();
     $(".posts-input").val("");
-    let selectOptions = $("#select-options option:selected").val();
+    let selectOptions = $(".option-selected").val();
     let postsFromDB = addPoststoDB(newPost, selectOptions);
-    createPostList(postsFromDB.key, newPost);
-    console.log(selectOptions);
-
-
-    
-    // let postsFromDB = addPoststoDB(newPost);
-    // let favInitial = 0;
-    // createPostList(postsFromDB.key, newPost, favInitial);
-    
-    // let selectOptions = $(".select-options").val();
-    // let postsFromDB = addPoststoDB(newPost, selectOptions);
-    // createPostList(postsFromDB.key, newPost);
+    let favInitial = 0;
+    createPostList(postsFromDB.key, newPost, favInitial);
 
     $('#add-post-modal').modal('hide')
   }
