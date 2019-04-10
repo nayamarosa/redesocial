@@ -1,15 +1,15 @@
-const database = firebase.database();
-const USER_ID = window.location.search.match(/\?id=(.*)/)[1];
+$(document).ready(function showProfile() { 
+<<<<<<< HEAD
 
-
-
-$(document).ready(function createProfile(name, email, password) {
- 
-
-
-    
-  }
-
+    database.ref('/users/' + USER_ID).once('value')
+    .then(function(snapshot){
+      snapshot.forEach(function(childSnapshot) {
+        let childKey = childSnapshot.key;
+        let childData = childSnapshot.val();
+         console.log(childSnapshot, childKey, childData);
+      })
+    });
+});	});
 
 
 
@@ -72,10 +72,19 @@ $(document).ready(function createProfile(name, email, password) {
   });
 
 
+=======
+>>>>>>> 4058a7e302c6da5798ab633c025118e3131d3f91
+
+  database.ref('/users/' + USER_ID).once('value')
+    .then(function(snapshot){
+      snapshot.forEach(function(childSnapshot) {
+        let childKey = childSnapshot.key;
+        let childData = childSnapshot.val();
 
 
-
+        console.log(childSnapshot, childKey, childData);
+      })
+    });
 });
 
-
-
+    
