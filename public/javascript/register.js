@@ -4,7 +4,7 @@ $(document).ready(function(){
   $(".btn-create").click(createUser);
 });
 
-function createUser(event){
+function createUser(event) {
   event.preventDefault();
   
   let name = $(".add-name").val();
@@ -14,7 +14,7 @@ function createUser(event){
   // createProfile(name, email, password)
 }
 
-function createUserFirebase(name, email, password){
+function createUserFirebase(name, email, password) {
   firebase.auth().createUserWithEmailAndPassword(email, password)
   .then(function(response){
     let userId = response.user.uid;
@@ -27,7 +27,7 @@ function createUserFirebase(name, email, password){
   });
 }
 
-function addUserToDB(id, name, email){
+function addUserToDB(id, name, email) {
   database.ref("users/" + id).set({
     name: name,
     mail: email
@@ -39,6 +39,6 @@ function handleError(error) {
   alert(errorMessage);
 }
 
-function redirectPosts(userId){
+function redirectPosts(userId) {
   window.location = "../feed.html?id=" + userId;
 }

@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(document).ready(function() {
 
   $(".btn-login").click(enterLogin);
   $(".login-google").click(loginWithGoogle);
@@ -7,14 +7,20 @@ $(document).ready(function(){
   
 });
 
+<<<<<<< HEAD
 function enterLogin(event){
   event.preventDefault();  
+=======
+function enterLogin(event) {
+  event.preventDefault();
+  
+>>>>>>> 4058a7e302c6da5798ab633c025118e3131d3f91
   let email = $(".login-email").val();
   let password = $(".login-password").val();
   loginUserFirebase(email, password);  
-}
+};
 
-function loginUserFirebase(email, password){
+function loginUserFirebase(email, password) {
   firebase.auth().signInWithEmailAndPassword(email, password)
   .then(function(response){
     let userId = response.user.uid;
@@ -23,7 +29,7 @@ function loginUserFirebase(email, password){
   .catch(function(error){
     handleError(error);
   });
-}
+};
 
 function authPersistence() {
   firebase.auth().setPersistence(firebase.auth.Auth.Persistence.LOCAL)
@@ -38,10 +44,11 @@ function authPersistence() {
 function handleError(error) {
   let errorMessage = error.message;
   alert(errorMessage);
-}
+};
 
 function redirectPosts(userId){
   window.location = "../feed.html?id=" + userId;
+<<<<<<< HEAD
 }
     event.preventDefault();
     let email = $(".login-email").val();
@@ -72,5 +79,8 @@ function handleError(error) {
 
 
 
+=======
+};
+>>>>>>> 4058a7e302c6da5798ab633c025118e3131d3f91
 
 
