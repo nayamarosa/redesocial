@@ -10,49 +10,58 @@
   <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-database.js"></script>
   <script src="/javascript/firebase-config.js"></script>
 
+  
   <link href="https://fonts.googleapis.com/css?family=Concert+One|Roboto" rel="stylesheet">
-
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="/css/feed.css">
-  <link rel="stylesheet" href="/css/login.css" <title>TROCARIA</title>
+  <link rel="stylesheet" href="/css/login.css">
+  
+  <title>TROCARIA</title>
+
 </head>
 
 <body>
-  <header>
-    <nav class="navbar navbar-expand-lg d-flex justify-content-between navbar-style">
-      <a class="navbar-brand m-0 p-0 col-3 logo" href="#">
-        <img src="images/trocaria-logo.png" alt="trocaria" srcset="">
+  <header class="d-flex justify-content-center navbar-style">
+    <nav class="navbar navbar-expand-lg d-flex justify-content-between nav-items">
+      <a class="navbar-brand m-0 p-0 col-10 col-lg-3 logo-feed" href="#">
+        <img src="images/trocaria-logo.png" alt="trocaria">
       </a>
 
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
-        <input class="form-control mr-sm-2 col-5" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      
+      <div class="collapse navbar-collapse d-flex justify-content-between" id="navbarSupportedContent">
+        
+        <div class="d-flex col-lg-6">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="PESQUISAR">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">PESQUISAR</button>
+        </div>
+        
 
         <form class="form-inline my-2 my-lg-0 form-navbar">
           <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link m-2 p-0 navbar-icons" href="#">
-                <img src="icons/notifications.png" alt="notifications" srcset="">
+            <li class="nav-item ml-4">
+              <a class="nav-link p-0 navbar-icons" href="#">
+                <img src="icons/notifications.png" alt="notifications">
               </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link m-2 p-0 navbar-icons" href="#">
-                <img src="icons/msg.png" alt="messages" srcset="">
+            <li class="nav-item ml-4">
+              <a class="nav-link p-0 navbar-icons" href="#">
+                <img src="icons/msg.png" alt="messages">
               </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link m-2 p-0 navbar-icons" href="#">
-                <img src="icons/config.png" alt="configurations" srcset="">
+            <li class="nav-item ml-4">
+              <a class="nav-link p-0 navbar-icons" href="#">
+                <img src="icons/config.png" alt="configurations">
               </a>
             </li>
-            <li class="nav-bar">
-              <a class="nav-link m-2 p-0 navbar-icons" href="#">
+            <li class="nav-bar ml-4">
+              <a class="nav-link p-0 navbar-icons" href="#">
                 <img src="icons/logout.png" alt="configurations" id="button-logout" value="SAIR">
               </a>
             </li>
           </ul>
+
+          
 
         </form>
       </div>
@@ -152,20 +161,25 @@
             </div> 
           </div>
         </div>
+
       </div>
     </section>
     </section>
   </main>
 
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    crossorigin="anonymous"></script>
+  
+
+
+  
+  <footer class="footer-style roboto-font-family font-p">
+    <p>made by squad mara</p>
+    <p><u>TERMOS DE USO</u></p>
+  </footer>
+  
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  
 
   <script src="javascript/remove-posts.js"></script>
   <script src="javascript/edit-posts.js"></script>
