@@ -4,16 +4,21 @@ const USER_ID = window.location.search.match(/\?id=(.*)/)[1];
 $(document).ready(function() {
   getPostsfromDB();
   $(".add-posts").click(addPostsClick);
-  $(".order-select-options").change(filterBySelectOptions);
+  $(".order-select-options").change(function(){
+    let btnSelect = $(".order-select-options option:selected").val();
+    filterBySelectOptions(btnSelect);
+  })
   $("#button-logout").click(signOut);
+ 
   
-  function filterBySelectOptions() {
+  function filterBySelectOptions(btnSelect) {
     $(".posts-list").html("");
-    firebase.database().ref("posts/" + USER_ID).orderByChild("selectOptions").equalTo("private").once("value", function (snapshot) {
+    firebase.database().ref("posts/" + USER_ID).orderByChild("selectOptions").equalTo(btnSelect).once("value", function (snapshot) {
             snapshot.forEach(function (childSnapshot) {
                 let childKey = childSnapshot.key;
                 let childData = childSnapshot.val();
                 createPostList(childKey, childData.text, childData.fav);
+                console.log(btnSelect);
             });
         })
   };
@@ -89,6 +94,6 @@ $(document).ready(function() {
 //eita function validateContent() => (createPostList().length >= 0) ? '$('nomedobotão').attr('disabled', 'disabled'); ' : '$('button').removeAttr('disabled')';
 
 
-showProfile()
+// showProfile()
 
 });
