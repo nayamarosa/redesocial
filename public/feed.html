@@ -77,26 +77,26 @@
       <section>
         <!-- Modal Post -->
         <div class="modal fade" id="add-post-modal" tabindex="-1" role="dialog" aria-labelledby="add-post-modalLabel" aria-hidden="true">
-          <div class=".modal-dialog" role="document">
+          <div class="modal-dialog" role="document">
             <div class="modal-content container d-flex flex-column align-items-center">
 
               <div class="modal-header">
-                <h5 class="concert-font-family" id="add-post-modalLabel">O que você gostaria de trocar ou doar?</h5>
+                <h5 class="concert-font-family" id="add-post-modalLabel">Criar publicação</h5>
               </div>
 
               <div class="modal-body">
-                <textarea name="posts-input" class="posts-input form-control"></textarea>
+                <textarea name="posts-input" placeholder="O que você gostaria de trocar ou doar?"class="form-control posts-input"></textarea>
               </div>
 
               <div>
-                <select name="select" class="btn btn-outline-secondary dropdown-toggle option-selected ">
+                <select name="select" class="btn btn-outline-secondary dropdown-toggle option-selected">
                   <option value="public" class="post-public">Público</option>
                   <option value="private" class="post-private">Privado</option>        
                 </select>
               </div>
 
               <div class="d-flex flex-column align-items-center">
-                <button type="button" class="btn rounded-pill border-0 mb-3  concert-font-family font-g">POSTAR</button>
+                <button type="button" class="btn rounded-pill border-0 mb-3 concert-font-family font-g add-posts">PUBLICAR</button>
                 <button type="button" class="btn rounded-pill border-0 mb-3 concert-font-family font-m" data-dismiss="modal">FECHAR</button>
               </div>
             </div>
@@ -143,7 +143,7 @@
               </div>
               <div class="modal-body">
                 <textarea id="update-post" name="posts-update"
-                class="posts-input textarea-style" cols="30" rows="10"></textarea>
+                class="textarea-style  " cols="30" rows="10"></textarea>
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary"

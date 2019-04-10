@@ -4,25 +4,25 @@ const USER_ID = window.location.search.match(/\?id=(.*)/)[1];
 $(document).ready(function(){
   getPostsfromDB();
   $(".add-posts").click(addPostsClick);
-  $(".order-select-options").change(filterBySelectOptions);
+  // $(".order-select-options").change(filterBySelectOptions);
   
-  function filterBySelectOptions() {
-    $(".posts-list").html("");
-    let ref = firebase.database().ref("post/" + USER_ID);
-    console.log(ref);
-        ref.orderByChild("selectOptions").equalTo('private').once('value').then(function (snapshot) {
-            console.log(snapshot.val())
-            // .forEach(function (childSnapshot) {
-            //     let childKey = childSnapshot.key;
-            //     console.log(childKey);
-            //     let childData = childSnapshot.val();
-            //     createPostList(childKey, childData.text);
-            // });
-        }).catch(function (error){
-          console.log(error);
-        } )
+  // function filterBySelectOptions() {
+  //   $(".posts-list").html("");
+  //   let ref = firebase.database().ref("post/" + USER_ID);
+  //   console.log(ref);
+  //       ref.orderByChild("selectOptions").equalTo('private').once('value').then(function (snapshot) {
+  //           console.log(snapshot.val())
+  //           // .forEach(function (childSnapshot) {
+  //           //     let childKey = childSnapshot.key;
+  //           //     console.log(childKey);
+  //           //     let childData = childSnapshot.val();
+  //           //     createPostList(childKey, childData.text);
+  //           // });
+  //       }).catch(function (error){
+  //         console.log(error);
+  //       } )
 
-  }
+  // }
   
   function addPostsClick(event) {
     event.preventDefault();
