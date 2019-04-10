@@ -92,9 +92,9 @@
         </div>
       </section>
       
-      <section>
-        <!-- Modal Post -->
-        <div class="modal fade" id="add-post-modal" tabindex="-1" role="dialog" aria-labelledby="add-post-modalLabel" aria-hidden="true">
+      <section name="post-modal">
+        <div class="modal fade" id="add-post-modal" tabindex="-1" role="dialog" 
+        aria-labelledby="add-post-modalLabel" aria-hidden="true">
           <div class="modal-dialog" role="document">
             <div class="modal-content container d-flex flex-column">
               <div class="modal-header">
@@ -102,73 +102,72 @@
               </div>
               <div class="modal-body">
                 <textarea name="posts-input" placeholder="O que você gostaria de trocar ou doar?"
-                class="form-control posts-input"></textarea>
+                  class="form-control posts-input"></textarea>
               </div>
               <div>
                 <select name="select"
-                class="btn btn-outline-secondary dropdown-toggle rounded-pill border-0 mb-3 option-selected">
-                <option value="public" class="post-public">Público</option>
-                <option value="private" class="post-private">Privado</option>
-              </select>
-            </div>
-            <div class="d-flex flex-column align-items-center">
-              <button type="button"
-              class="btn rounded-pill border-0 mb-3 concert-font-family font-g add-posts">PUBLICAR</button>
-              <button type="button" class="btn rounded-pill border-0 mb-3 concert-font-family font-m"
-              data-dismiss="modal">CANCELAR</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    
-    <section name="remove-modal">
-      <div class="modal fade" id="remove-post-modal" tabindex="-1" role="dialog"
-      aria-labelledby="remove-post-modalLabel" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="concert-font-family" id="remove-post-modalLabel">REMOVER
-              POST</h5>
-            </div>
-            <div class="modal-body">
-              <h5>Tem certeza que deseja remover este post?</h5>
-            </div>
-            <div class="d-flex flex-column align-items-center">
-              <button type="button" class="btn rounded-pill border-0 mb-3 concert-font-family font-g" data-dismiss="modal">CANCELAR</button>
-              <button type="button" class="btn rounded-pill border-0 mb-3 concert-font-family font-m remove-post">REMOVER</button>
+                  class="btn btn-outline-secondary dropdown-toggle rounded-pill border-0 mb-3 option-selected">
+                  <option value="public" class="post-public">Público</option>
+                  <option value="private" class="post-private">Privado</option>
+                </select>
+              </div>
+              <div class="d-flex flex-column align-items-center">
+                <button type="button"
+                  class="btn rounded-pill border-0 mb-3 concert-font-family font-g add-posts">PUBLICAR</button>
+                <button type="button" class="btn rounded-pill border-0 mb-3 concert-font-family font-m"
+                  data-dismiss="modal">CANCELAR</button>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-    
-    <section name="edit-modal">
-      <div class="modal fade" id="update-post-modal" tabindex="-1" role="dialog"
-      aria-labelledby="update-post-modalLabel" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content container d-flex flex-column">
-          <div class="modal-header">
-            <h5 class="concert-font-family" id="update-post-modalLabel">Editar publicação</h5>
+      </section>
+      <section name="remove-modal">
+        <div class="modal fade" id="remove-post-modal" tabindex="-1" role="dialog"
+          aria-labelledby="remove-post-modalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="concert-font-family" id="remove-post-modalLabel">REMOVER
+                  POST</h5>
+              </div>
+              <div class="modal-body">
+                <h5>Tem certeza que deseja remover este post?</h5>
+              </div>
+              <div class="d-flex flex-column align-items-center">
+                <button type="button" class="btn rounded-pill border-0 mb-3 concert-font-family font-g" data-dismiss="modal">CANCELAR</button>
+                <button type="button" class="btn rounded-pill border-0 mb-3 concert-font-family font-m remove-post">REMOVER</button>
+              </div>
+            </div>
           </div>
-          <div class="modal-body">
-            <textarea id="update-post" name="posts-update" class="form-control posts-input" cols="30" rows="10"></textarea>
-          </div>
-          <div>
-            <select name="select"
-            class="btn btn-outline-secondary dropdown-toggle rounded-pill border-0 mb-3 option-selected">
-            <option value="public" class="post-public">Público</option>
-            <option value="private" class="post-private">Privado</option>
-          </select>
         </div>
-        <div class="d-flex flex-column align-items-center ">
-          <button type="button" class="btn rounded-pill border-0 mb-3 concert-font-family font-g update-post">PUBLICAR</button>
-          <button type="button" class="btn rounded-pill border-0 mb-3 concert-font-family font-m" data-dismiss="modal">CANCELAR</button>
-        </div> 
-      </div>
-    </div>
-  </div>
-</section>
+      </section>
+      <section name="edit-modal">
+        <div class="modal fade" id="update-post-modal" tabindex="-1" role="dialog"
+          aria-labelledby="update-post-modalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content container d-flex flex-column">
+              <div class="modal-header">
+                <h5 class="concert-font-family" id="update-post-modalLabel">Editar publicação</h5>
+              </div>
+              <div class="modal-body">
+                <textarea id="update-post" name="posts-update" class="form-control posts-input" cols="30" rows="10"></textarea>
+              </div>
+              <div>
+                <select name="select"
+                  class="btn btn-outline-secondary dropdown-toggle rounded-pill border-0 mb-3 option-selected">
+                  <option value="public" class="post-public">Público</option>
+                  <option value="private" class="post-private">Privado</option>
+                </select>
+              </div>
+              <div class="d-flex flex-column align-items-center ">
+                <button type="button" class="btn rounded-pill border-0 mb-3 concert-font-family font-g update-post">PUBLICAR</button>
+                <button type="button" class="btn rounded-pill border-0 mb-3 concert-font-family font-m" data-dismiss="modal">CANCELAR</button>
+              
+              </div> 
+            </div>
+          </div>
+        </div>
+      </section>
 </main>
 </section>
 
