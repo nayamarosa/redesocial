@@ -1,6 +1,6 @@
 function updatePosts(){
   let message;
-  $(".update-modal").click(function() {
+  $(".update-modal").unbind().click(function() {
     
     $("#update-post").val($(this).prev().text());
     message = $(this).prev();
@@ -10,7 +10,9 @@ function updatePosts(){
     
   })
   function updatePostsTwo(key){
-    $(".update-post").click(function(){
+    $(".update-post").unbind().click(function(){
+      console.log(key);
+      
       database.ref("posts/" + USER_ID + "/" + key).update({
         text: $("#update-post").val()
       });      
