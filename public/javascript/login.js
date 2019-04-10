@@ -4,7 +4,6 @@ $(document).ready(function() {
   $(".login-google").click(loginWithGoogle);
   // $(".login-fb").click(loginWithFacebook);
   $("#checkbox-reminder").click(authPersistence);
-  
 });
 
 
@@ -49,7 +48,7 @@ function redirectPosts(userId){
     loginUserFirebase(email, password);  
 };
 
-function loginUserFirebase(email, password){
+function loginUserFirebase(email, password) {
     firebase.auth().signInWithEmailAndPassword(email, password)
     .then(function(response){
         let userId = response.user.uid;
@@ -70,8 +69,5 @@ function handleError(error) {
 };
 
 
-
-
-};
 
 
