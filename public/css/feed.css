@@ -158,13 +158,7 @@
   .btn-new-post:hover{
     background-color: #CCCCCC;
   }
-  
-  .textarea-style{
-    resize: none;
-    width: 400px;
-    height: 150px;
-  }
-  
+
   .add-posts{
     background-color: #C7E44F;
     width: 180px;
