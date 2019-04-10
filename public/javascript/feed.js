@@ -1,10 +1,11 @@
 const database = firebase.database();
 const USER_ID = window.location.search.match(/\?id=(.*)/)[1];
 
-$(document).ready(function(){
+$(document).ready(function() {
   getPostsfromDB();
   $(".add-posts").click(addPostsClick);
   $(".order-select-options").change(filterBySelectOptions);
+  $("#button-logout").click(signOut);
   
   function filterBySelectOptions() {
     $(".posts-list").html("");
@@ -20,16 +21,14 @@ $(document).ready(function(){
   
   function addPostsClick(event) {
     event.preventDefault();
-    
     let newPost = $(".posts-input").val();
     $(".posts-input").val("");
     let selectOptions = $(".option-selected").val();
     let postsFromDB = addPoststoDB(newPost, selectOptions);
     let favInitial = 0;
     createPostList(postsFromDB.key, newPost, favInitial);
-
     $('#add-post-modal').modal('hide')
-  }
+  };
   
   function addPoststoDB(text, select){
     return database.ref("/posts/" + USER_ID).push({
@@ -37,7 +36,7 @@ $(document).ready(function(){
       selectOptions: select,
       fav:0
     });
-  }
+  };
   
   function getPostsfromDB() {
     database.ref('/posts/' + USER_ID).once('value')
@@ -45,21 +44,16 @@ $(document).ready(function(){
       snapshot.forEach(function(childSnapshot) {
         let childKey = childSnapshot.key;
         let childData = childSnapshot.val();
-        
-        createPostList(childKey, childData.text, childData.fav);
+      createPostList(childKey, childData.text, childData.fav);
       });
     });
-  }
+  };
   
   function createPostList(key, text, fav) {
-    
     $(".posts-list").append(`
     <li class="posts">
-
     <div>
-
       <span>${text}</span>
-
       <i data-toggle="modal" class="update-modal" data-id="${key}" data-message="${text}" data-target="#update-post-modal">
         <img src="icons/edit.png" alt="editar" id="button-logout" value="EDIT">
       </i>
@@ -67,31 +61,28 @@ $(document).ready(function(){
         <img src="icons/delete.png" alt="remover" id="button-logout" value="REMOVE">
       </i>
     </div>
-
     <div>
       <i data-toggle="modal" class="favorite-modal" data-id="${key}" data-target="#favorite-post-modal">
         <img src="icons/like.png" alt="like" id="button-logout" value="LIKE">
       </i>
       <i data-toggle="modal" class="favorite-count-modal roboto-font-family font-p" data-id="${key}" data-target="#favorite-count-modal"> ${fav}</i>
     </div>
-    
     </li> `);
-    
     removePosts();
     updatePosts();
     favoriteCount(key);
-  }
-  
-  $("#button-logout").click(signOut);
-  
-  function signOut(){
+  };
+    
+  function signOut() {
     firebase.auth().signOut()
-    .then(function() {
-      window.location = "index.html"
-    })
-    .catch(function(error) {
-      console.error('Sign Out Error', error);
-    });
-  }
-  
-})
+    .then(() => {window.location = "index.html"})
+    .catch((error) => {console.error(error)});
+  };
+
+
+//eita function validateContent() => (createPostList().length >= 0) ? '$('nomedobotão').attr('disabled', 'disabled'); ' : '$('button').removeAttr('disabled')';
+
+
+showProfile()
+
+});
