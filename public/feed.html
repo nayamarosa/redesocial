@@ -58,30 +58,38 @@
     </nav>
   </header>
   
-  <main class="d-flex">
-    <aside class="mt-5 col-3">
-      <section class="aside-content">
-
+  <section class="d-flex justify-content-center">
+    <aside class="m-5 col-3 ">
+      <section class="rounded-lg aside-content">
         <h1>texto</h1>
         <figure>
-          <!-- fotoprefil -->
+          <!-- fotoperfil -->
         </figure>
       </section>
     </aside>
     
-    <section class="mt-5 col-8">
-      <select name="select" class="select-options">
-        <option value="public" class="post-public roboto-font-family">Público</option>
-        <option value="private" class="post-private roboto-font-family">Privado</option>
-      </select>
-      
-      <button type="button" class="btn btn-primary rounded-pill border-0 btn-new-post concert-font-family font-g" data-toggle="modal" data-target="#add-post-modal">
-        TROQUE OU DOE ALGUMA COISA
-      </button>
+    <main class="mr-5 mt-3 col-8 d-flex flex-column align-items-center">
+      <div class="mb-2 select-options">
+        <select name="select" class="order-select-options">
+          <option value="public" class="post-public roboto-font-family">Público</option>
+          <option value="private" class="post-private roboto-font-family">Privado</option>
+        </select>
+      </div>
       
       <section>
-        <ul class="posts-list"></ul>
+        <div>
+          <button type="button" class="btn btn-primary rounded-pill border-0 btn-new-post concert-font-family font-g" data-toggle="modal" data-target="#add-post-modal">
+            CLIQUE PARA TROCAR OU DOAR ALGUMA COISA
+          </button>
+        </div>
+        <div>
+          <ul class="posts-list"></ul>
+        </div>
       </section>
+      
+      
+      
+      
       
       <section>
         <!-- Modal Post -->
@@ -93,7 +101,7 @@
               </div>
               <div class="modal-body">
                 <textarea name="posts-input" class="posts-input textarea-style"></textarea>
-                <select name="select" class="select-options">
+                <select name="select" class="option-selected">
                   <option value="public" class="post-public">Público</option>
                   <option value="private" class="post-private">Privado</option>
                 </select>
@@ -155,9 +163,14 @@
           </div>
         </div>
       </section>
-    </section>
-  </main>
+    </main>
+  </section>
   
+  <footer class="footer-style roboto-font-family font-p">
+      <p>made by squad mara</p>
+      <p><u>TERMOS DE USO</u></p>
+    </footer>
+
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>

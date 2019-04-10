@@ -4,32 +4,35 @@ const USER_ID = window.location.search.match(/\?id=(.*)/)[1];
 $(document).ready(function(){
   getPostsfromDB();
   $(".add-posts").click(addPostsClick);
-  $(".select-options").change(filterBySelectOptions);
+  // $(".order-select-options").change(filterBySelectOptions);
   
-  function filterBySelectOptions() {
-    var selectedOption = database.ref("/posts/" + USER_ID).orderByChild("selectOptions");
-    return selectedOption;
-  }
+  // function filterBySelectOptions() {
+  //   $(".posts-list").html("");
+  //   let ref = firebase.database().ref("post/" + USER_ID);
+  //   console.log(ref);
+  //       ref.orderByChild("selectOptions").equalTo('private').once('value').then(function (snapshot) {
+  //           console.log(snapshot.val())
+  //           // .forEach(function (childSnapshot) {
+  //           //     let childKey = childSnapshot.key;
+  //           //     console.log(childKey);
+  //           //     let childData = childSnapshot.val();
+  //           //     createPostList(childKey, childData.text);
+  //           // });
+  //       }).catch(function (error){
+  //         console.log(error);
+  //       } )
+
+  // }
   
   function addPostsClick(event) {
     event.preventDefault();
     
     let newPost = $(".posts-input").val();
     $(".posts-input").val("");
-    let selectOptions = $("#select-options option:selected").val();
+    let selectOptions = $(".option-selected").val();
     let postsFromDB = addPoststoDB(newPost, selectOptions);
-    createPostList(postsFromDB.key, newPost);
-    console.log(selectOptions);
-
-
-    
-    // let postsFromDB = addPoststoDB(newPost);
-    // let favInitial = 0;
-    // createPostList(postsFromDB.key, newPost, favInitial);
-    
-    // let selectOptions = $(".select-options").val();
-    // let postsFromDB = addPoststoDB(newPost, selectOptions);
-    // createPostList(postsFromDB.key, newPost);
+    let favInitial = 0;
+    createPostList(postsFromDB.key, newPost, favInitial);
 
     $('#add-post-modal').modal('hide')
   }
@@ -58,11 +61,26 @@ $(document).ready(function(){
     
     $(".posts-list").append(`
     <li>
-    <span>${text}</span>
-    <i data-toggle="modal" class="update-modal" data-id=${key} data-target="#update-post-modal">EDITAR</i>
-    <i data-toggle="modal" class="remove-modal" data-id=${key} data-target="#remove-post-modal">EXCLUIR</i>
-    <i data-toggle="modal" class="favorite-modal" data-id=${key} data-target="#favorite-post-modal">FAVORITAR</i>
-    <i data-toggle="modal" class="favorite-count-modal" data-id=${key} data-target="#favorite-count-modal"> ${fav}</i>
+
+    <div>
+
+      <span>${text}</span>
+
+      <i data-toggle="modal" class="update-modal" data-id=${key} data-message=${text} data-target="#update-post-modal">
+        <img src="icons/edit.png" alt="configurations" id="button-logout" value="EDIT">
+      </i>
+      <i data-toggle="modal" class="remove-modal" data-id=${key} data-target="#remove-post-modal">
+        <img src="icons/delete.png" alt="configurations" id="button-logout" value="REMOVE">
+      </i>
+    </div>
+
+    <div>
+      <i data-toggle="modal" class="favorite-modal" data-id=${key} data-target="#favorite-post-modal">
+        <img src="icons/like.png" alt="configurations" id="button-logout" value="LIKE">
+      </i>
+      <i data-toggle="modal" class="favorite-count-modal roboto-font-family font-p" data-id=${key} data-target="#favorite-count-modal"> ${fav}</i>
+    </div>
+    
     </li> `);
     
     removePosts();

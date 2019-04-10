@@ -115,11 +115,11 @@
     background-color: #D5EC76;
     height: 60px;
   }
-
+  
   /* .logo-feed{
     width: 35%;
   } */
-
+  
   .logo-feed img{
     width: 180px;
   }
@@ -131,26 +131,22 @@
   .navbar-icons img{
     width: 40px;
   }
-
+  
   .aside-content{
     background-color: #C7E44F;
-    /* width: 20%; */
-  }
-
-  .select-options{
-    float: right;
+    height: 70vh;
   }
   
   .btn-new-post{
     background-color: #C7E44F;
-    width: 80%;
+    width: 700px;
     height: 50px;
   }
   
   .btn-new-post:hover{
     background-color: #CCCCCC;
   }
-
+  
   .textarea-style{
     resize: none;
     width: 400px;
@@ -173,28 +169,19 @@
     height: 35px;
   }
   
-  .checkin{
+  .favorite-modal img{
+    width: 30px;
     cursor: pointer;
   }
   
-  .btn-create{
-    background-color: #C7E44F;
-    width: 180px;
-    height: 50px;
+  .update-modal img{
+    width: 30px;
+    cursor: pointer;
   }
   
-  .btn-create:hover{
-    background-color: #CCCCCC;
-  }
-  
-  .btn-back{
-    background-color: #CCCCCC;
-    width: 100px;
-    height: 35px;
-  }
-  
-  .btn-back:hover{
-    background-color: #B5D532;
+  .remove-modal img{
+    width: 30px;
+    cursor: pointer;
   }
   
   .footer-style{
