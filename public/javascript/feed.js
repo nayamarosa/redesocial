@@ -89,4 +89,14 @@ $(document).ready(function() {
     .then(() => {window.location = "index.html"})
     .catch((error) => {console.error(error)});
   };
+
+
+
+
+//eita function validateContent() => (createPostList().length >= 0) ? '$('nomedobotão').attr('disabled', 'disabled'); ' : '$('button').removeAttr('disabled')';
+
+
+// showProfile()
+  
 });
+
