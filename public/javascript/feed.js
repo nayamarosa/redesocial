@@ -6,23 +6,16 @@ $(document).ready(function() {
   $(".add-posts").click(addPostsClick);
   $(".order-select-options").change(filterBySelectOptions);
   $("#button-logout").click(signOut);
-
   
   function filterBySelectOptions() {
     $(".posts-list").html("");
-    let ref = firebase.database().ref("post/" + USER_ID);
-    console.log(ref);
-        ref.orderByChild("selectOptions").equalTo('private').once('value').then(function (snapshot) {
-            console.log(snapshot.val())
-            // .forEach(function (childSnapshot) {
-            //     let childKey = childSnapshot.key;
-            //     console.log(childKey);
-            //     let childData = childSnapshot.val();
-            //     createPostList(childKey, childData.text);
-            // });
-        }).catch(function (error) {
-          console.log(error);
-        } )
+    firebase.database().ref("posts/" + USER_ID).orderByChild("selectOptions").equalTo("private").once("value", function (snapshot) {
+            snapshot.forEach(function (childSnapshot) {
+                let childKey = childSnapshot.key;
+                let childData = childSnapshot.val();
+                createPostList(childKey, childData.text, childData.fav);
+            });
+        })
 
   }
   
