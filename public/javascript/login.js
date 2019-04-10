@@ -9,9 +9,8 @@ function enterLogin(event){
     
     let email = $(".login-email").val();
     let password = $(".login-password").val();
-    // console.log(email, password);
     loginUserFirebase(email, password);  
-}
+};
 
 function loginUserFirebase(email, password){
     firebase.auth().signInWithEmailAndPassword(email, password)
@@ -22,16 +21,18 @@ function loginUserFirebase(email, password){
     .catch(function(error){
         handleError(error);
     });
-}
+};
+
+function redirectPosts(userId){
+  window.location = "../feed.html?id=" + userId;
+};
 
 function handleError(error) {
     let errorMessage = error.message;
     alert(errorMessage);
-}
+};
 
-function redirectPosts(userId){
-    window.location = "../feed.html?id=" + userId;
-}
+
 
 
 

@@ -1,7 +1,7 @@
 const database = firebase.database();
 const USER_ID = window.location.search.match(/\?id=(.*)/)[1];
 
-$(document).ready(function(){
+$(document).ready(function() {
   getPostsfromDB();
   $(".add-posts").click(addPostsClick);
   $(".order-select-options").change(filterBySelectOptions);
@@ -20,7 +20,7 @@ $(document).ready(function(){
             //     let childData = childSnapshot.val();
             //     createPostList(childKey, childData.text);
             // });
-        }).catch(function (error){
+        }).catch(function (error) {
           console.log(error);
         } )
 
@@ -79,5 +79,7 @@ $(document).ready(function(){
 
 // function validateContent() => (createPostList().length >= 0) ? '$('nomedobotão').attr('disabled', 'disabled'); ' : '$('button').removeAttr('disabled')';
 
+
+showProfile()
 
 });
