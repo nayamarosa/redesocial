@@ -78,8 +78,6 @@ $(document).ready(function() {
   }
   
  
-
-  };
     
   function signOut() {
     firebase.auth().signOut()
@@ -96,4 +94,4 @@ $(document).ready(function() {
 
 // showProfile()
 
-});
+// });
