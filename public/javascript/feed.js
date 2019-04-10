@@ -60,25 +60,25 @@ $(document).ready(function(){
   function createPostList(key, text, fav) {
     
     $(".posts-list").append(`
-    <li>
+    <li class="posts">
 
     <div>
 
       <span>${text}</span>
 
-      <i data-toggle="modal" class="update-modal" data-id=${key} data-message=${text} data-target="#update-post-modal">
-        <img src="icons/edit.png" alt="configurations" id="button-logout" value="EDIT">
+      <i data-toggle="modal" class="update-modal" data-id="${key}" data-message="${text}" data-target="#update-post-modal">
+        <img src="icons/edit.png" alt="editar" id="button-logout" value="EDIT">
       </i>
-      <i data-toggle="modal" class="remove-modal" data-id=${key} data-target="#remove-post-modal">
-        <img src="icons/delete.png" alt="configurations" id="button-logout" value="REMOVE">
+      <i data-toggle="modal" class="remove-modal" data-id="${key}" data-target="#remove-post-modal">
+        <img src="icons/delete.png" alt="remover" id="button-logout" value="REMOVE">
       </i>
     </div>
 
     <div>
-      <i data-toggle="modal" class="favorite-modal" data-id=${key} data-target="#favorite-post-modal">
-        <img src="icons/like.png" alt="configurations" id="button-logout" value="LIKE">
+      <i data-toggle="modal" class="favorite-modal" data-id="${key}" data-target="#favorite-post-modal">
+        <img src="icons/like.png" alt="like" id="button-logout" value="LIKE">
       </i>
-      <i data-toggle="modal" class="favorite-count-modal roboto-font-family font-p" data-id=${key} data-target="#favorite-count-modal"> ${fav}</i>
+      <i data-toggle="modal" class="favorite-count-modal roboto-font-family font-p" data-id="${key}" data-target="#favorite-count-modal"> ${fav}</i>
     </div>
     
     </li> `);
