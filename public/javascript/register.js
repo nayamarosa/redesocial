@@ -11,7 +11,7 @@ function createUser(event){
   let email = $(".add-email").val();
   let password = $(".add-password").val();
   createUserFirebase(name, email, password);
-  createProfile(name, email, password)
+  // createProfile(name, email, password)
 }
 
 function createUserFirebase(name, email, password){

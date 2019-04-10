@@ -4,6 +4,8 @@ const USER_ID = window.location.search.match(/\?id=(.*)/)[1];
 $(document).ready(function(){
   getPostsfromDB();
   $(".add-posts").click(addPostsClick);
+  $("#button-logout").click(signOut);
+
   // $(".order-select-options").change(filterBySelectOptions);
   
   // function filterBySelectOptions() {
@@ -89,15 +91,14 @@ $(document).ready(function(){
   }
   
   $("#button-logout").click(signOut);
-  
-  function signOut(){
+ 
+
+  function signOut() {
     firebase.auth().signOut()
-    .then(function() {
-      window.location = "index.html"
-    })
-    .catch(function(error) {
-      console.error('Sign Out Error', error);
-    });
-  }
+    .then(() => {window.location = "index.html"})
+    .catch((error) => {console.error(error)});
+  };
+// function validateContent() => (createPostList().length >= 0) ? '$('nomedobotão').attr('disabled', 'disabled'); ' : '$('button').removeAttr('disabled')';
+
   
 })

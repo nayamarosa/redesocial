@@ -23,3 +23,28 @@
 [debug] [2019-04-10T07:41:00.527Z] <<< HTTP RESPONSE 200
 [info] i  hosting: Serving hosting files from: public
 [info] ✔  hosting: Local server: http://localhost:5000
+[debug] [2019-04-10T16:24:29.947Z] ----------------------------------------------------------------------
+[debug] [2019-04-10T16:24:29.950Z] Command:       /usr/bin/node /usr/local/bin/firebase serve
+[debug] [2019-04-10T16:24:29.950Z] CLI Version:   6.5.3
+[debug] [2019-04-10T16:24:29.950Z] Platform:      linux
+[debug] [2019-04-10T16:24:29.950Z] Node Version:  v8.10.0
+[debug] [2019-04-10T16:24:29.950Z] Time:          Wed Apr 10 2019 13:24:29 GMT-0300 (-03)
+[debug] [2019-04-10T16:24:29.950Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-04-10T16:24:29.958Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-04-10T16:24:29.958Z] > authorizing via signed-in user
+[debug] [2019-04-10T16:24:29.958Z] [iam] checking project trocaria-11 for permissions ["firebase.projects.get"]
+[debug] [2019-04-10T16:24:29.960Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/trocaria-11:testIamPermissions  
+
+[debug] [2019-04-10T16:24:31.324Z] <<< HTTP RESPONSE 200
+[debug] [2019-04-10T16:24:31.327Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/trocaria-11  
+ 
+[debug] [2019-04-10T16:24:31.570Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/home/ana/Documentos/redesocial'...
+[info] 
+[debug] [2019-04-10T16:24:31.578Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/251335613869/clients/_:getWebAppConfig  
+ 
+[debug] [2019-04-10T16:24:32.332Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] ✔  hosting: Local server: http://localhost:5000

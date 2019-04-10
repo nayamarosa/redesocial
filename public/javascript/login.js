@@ -8,11 +8,9 @@ $(document).ready(function(){
 });
 
 function enterLogin(event){
-  event.preventDefault();
-  
+  event.preventDefault();  
   let email = $(".login-email").val();
   let password = $(".login-password").val();
-  // console.log(email, password);
   loginUserFirebase(email, password);  
 }
 
@@ -45,6 +43,33 @@ function handleError(error) {
 function redirectPosts(userId){
   window.location = "../feed.html?id=" + userId;
 }
+    event.preventDefault();
+    let email = $(".login-email").val();
+    let password = $(".login-password").val();
+    loginUserFirebase(email, password);  
+};
+
+function loginUserFirebase(email, password){
+    firebase.auth().signInWithEmailAndPassword(email, password)
+    .then(function(response){
+        let userId = response.user.uid;
+        redirectPosts(userId);
+    })
+    .catch(function(error){
+        handleError(error);
+    });
+};
+
+function redirectPosts(userId){
+  window.location = "../feed.html?id=" + userId;
+};
+
+function handleError(error) {
+    let errorMessage = error.message;
+    alert(errorMessage);
+};
+
+
 
 
 
