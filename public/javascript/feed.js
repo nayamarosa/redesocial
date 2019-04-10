@@ -76,17 +76,14 @@ $(document).ready(function() {
     updatePosts();
     favoriteCount(key);
   }
-  
-  
-  
-});
-
-function signOut() {
-  firebase.auth().signOut()
-  .then(() => {window.location = "index.html"})
-  .catch((error) => {console.error(error)});
-};
-
+ 
+ 
+    
+  function signOut() {
+    firebase.auth().signOut()
+    .then(() => {window.location = "index.html"})
+    .catch((error) => {console.error(error)});
+  };
 
 
 
@@ -95,3 +92,4 @@ function signOut() {
 
 // showProfile()
 
+// });
