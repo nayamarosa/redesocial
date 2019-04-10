@@ -9,18 +9,18 @@ $(document).ready(function() {
     filterBySelectOptions(btnSelect);
   })
   $("#button-logout").click(signOut);
- 
+  
   
   function filterBySelectOptions(btnSelect) {
     $(".posts-list").html("");
     firebase.database().ref("posts/" + USER_ID).orderByChild("selectOptions").equalTo(btnSelect).once("value", function (snapshot) {
-            snapshot.forEach(function (childSnapshot) {
-                let childKey = childSnapshot.key;
-                let childData = childSnapshot.val();
-                createPostList(childKey, childData.text, childData.fav);
-                console.log(btnSelect);
-            });
-        })
+      snapshot.forEach(function (childSnapshot) {
+        let childKey = childSnapshot.key;
+        let childData = childSnapshot.val();
+        createPostList(childKey, childData.text, childData.fav);
+        console.log(btnSelect);
+      });
+    })
   };
   
   function addPostsClick(event) {
@@ -48,7 +48,7 @@ $(document).ready(function() {
       snapshot.forEach(function(childSnapshot) {
         let childKey = childSnapshot.key;
         let childData = childSnapshot.val();
-      createPostList(childKey, childData.text, childData.fav);
+        createPostList(childKey, childData.text, childData.fav);
       });
     });
   };
@@ -57,19 +57,19 @@ $(document).ready(function() {
     $(".posts-list").append(`
     <li class="posts">
     <div>
-      <span>${text}</span>
-      <i data-toggle="modal" class="update-modal" data-id="${key}" data-message="${text}" data-target="#update-post-modal">
-        <img src="icons/edit.png" alt="editar" id="button-logout" value="EDIT">
-      </i>
-      <i data-toggle="modal" class="remove-modal" data-id="${key}" data-target="#remove-post-modal">
-        <img src="icons/delete.png" alt="remover" id="button-logout" value="REMOVE">
-      </i>
+    <span>${text}</span>
+    <i data-toggle="modal" class="update-modal" data-id="${key}" data-message="${text}" data-target="#update-post-modal">
+    <img src="icons/edit.png" alt="editar" id="button-logout" value="EDIT">
+    </i>
+    <i data-toggle="modal" class="remove-modal" data-id="${key}" data-target="#remove-post-modal">
+    <img src="icons/delete.png" alt="remover" id="button-logout" value="REMOVE">
+    </i>
     </div>
     <div>
-      <i data-toggle="modal" class="favorite-modal" data-id="${key}" data-target="#favorite-post-modal">
-        <img src="icons/like.png" alt="like" id="button-logout" value="LIKE">
-      </i>
-      <i data-toggle="modal" class="favorite-count-modal roboto-font-family font-p" data-id="${key}" data-target="#favorite-count-modal"> ${fav}</i>
+    <i data-toggle="modal" class="favorite-modal" data-id="${key}" data-target="#favorite-post-modal">
+    <img src="icons/like.png" alt="like" id="button-logout" value="LIKE">
+    </i>
+    <i data-toggle="modal" class="favorite-count-modal roboto-font-family font-p" data-id="${key}" data-target="#favorite-count-modal"> ${fav}</i>
     </div>
     </li> `);
     removePosts();
@@ -77,18 +77,17 @@ $(document).ready(function() {
     favoriteCount(key);
   }
   
- 
-
-  };
-    
-  function signOut() {
-    firebase.auth().signOut()
-    .then(() => {window.location = "index.html"})
-    .catch((error) => {console.error(error)});
-  };
-
   
-})
+  
+});
+
+function signOut() {
+  firebase.auth().signOut()
+  .then(() => {window.location = "index.html"})
+  .catch((error) => {console.error(error)});
+};
+
+
 
 
 //eita function validateContent() => (createPostList().length >= 0) ? '$('nomedobotão').attr('disabled', 'disabled'); ' : '$('button').removeAttr('disabled')';
@@ -96,4 +95,3 @@ $(document).ready(function() {
 
 // showProfile()
 
-});
