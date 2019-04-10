@@ -46,17 +46,23 @@ $(document).ready(function() {
     database.ref('/posts/' + USER_ID).once('value')
     .then(function(snapshot){
       snapshot.forEach(function(childSnapshot) {
-        let childKey = childSnapshot.key;
-        let childData = childSnapshot.val();
-        createPostList(childKey, childData.text, childData.fav);
+        database.ref('/users/' + USER_ID).once('value')
+        .then(function(snapshot){
+          let childDataName = snapshot.val();
+          let childKey = childSnapshot.key;
+          let childData = childSnapshot.val();
+        
+        createPostList(childKey, childData.text, childData.fav, childDataName.name ); 
+        });
       });
     });
   };
   
-  function createPostList(key, text, fav) {
+  function createPostList(key, text, fav, name) {
     $(".posts-list").append(`
     <li class="posts">
     <div>
+    <span>${name}</span>
     <span>${text}</span>
     <i data-toggle="modal" class="update-modal" data-id="${key}" data-message="${text}" data-target="#update-post-modal">
     <img src="icons/edit.png" alt="editar" id="button-logout" value="EDIT">
@@ -75,8 +81,7 @@ $(document).ready(function() {
     removePosts();
     updatePosts();
     favoriteCount(key);
-  }
- 
+  };
  
     
   function signOut() {
@@ -84,12 +89,4 @@ $(document).ready(function() {
     .then(() => {window.location = "index.html"})
     .catch((error) => {console.error(error)});
   };
-
-
-
-//eita function validateContent() => (createPostList().length >= 0) ? '$('nomedobotão').attr('disabled', 'disabled'); ' : '$('button').removeAttr('disabled')';
-
-
-// showProfile()
-
-// });
+});
