@@ -48,3 +48,32 @@
 [debug] [2019-04-10T16:24:32.332Z] <<< HTTP RESPONSE 200
 [info] i  hosting: Serving hosting files from: public
 [info] ✔  hosting: Local server: http://localhost:5000
+[debug] [2019-04-10T17:50:34.219Z] ----------------------------------------------------------------------
+[debug] [2019-04-10T17:50:34.246Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\nayam\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve
+[debug] [2019-04-10T17:50:34.247Z] CLI Version:   6.5.3
+[debug] [2019-04-10T17:50:34.247Z] Platform:      win32
+[debug] [2019-04-10T17:50:34.247Z] Node Version:  v11.12.0
+[debug] [2019-04-10T17:50:34.321Z] Time:          Wed Apr 10 2019 14:50:34 GMT-0300 (GMT-03:00)
+[debug] [2019-04-10T17:50:34.321Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-04-10T17:50:34.460Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-04-10T17:50:34.462Z] > authorizing via signed-in user
+[debug] [2019-04-10T17:50:34.462Z] [iam] checking project trocaria-11 for permissions ["firebase.projects.get"]
+[debug] [2019-04-10T17:50:34.468Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2019-04-10T17:50:34.469Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2019-04-10T17:50:36.371Z] <<< HTTP RESPONSE 200
+[debug] [2019-04-10T17:50:36.476Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/trocaria-11:testIamPermissions  
+
+[debug] [2019-04-10T17:50:38.341Z] <<< HTTP RESPONSE 200
+[debug] [2019-04-10T17:50:38.343Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/trocaria-11  
+ 
+[debug] [2019-04-10T17:50:40.220Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'C:\Projetos\redesocial'...
+[info] 
+[debug] [2019-04-10T17:50:40.361Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/251335613869/clients/_:getWebAppConfig  
+ 
+[debug] [2019-04-10T17:50:41.992Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] +  hosting: Local server: http://localhost:5000
