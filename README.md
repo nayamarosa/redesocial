@@ -19,7 +19,7 @@ Estima-se que o uso de dispositivos móveis no mundo aumente de 7 bilhões em 20
 Ao fazer uma versão mobile do site, permite-se que os usuários encontrem, de forma rápida, exatamente o que estão procurando, passem mais tempo em acesso e tenham suas necessidades atendidas. Além de contar com melhor ranqueamento por parte dos buscadores e incrementa a otimização do carregamento das páginas. Os desafios do conceito passam pela priorização de exibição, carregamento rápido e consumo mínimo de dados. A eficiência desses quesitos não garante a permanência do usuário no serviço, mas altera significativamente a experiência de navegação. A agilidade e a disponibilidade são valores das práticas de responsividade dessa  tendência.	
 
 
-## Protótipagem e testes
+## Prototipagem e testes
 
 1ª etapa: foram construídos seis protótipos, três telas pensadas para mobile e três para web.
 
