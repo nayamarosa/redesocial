@@ -22,7 +22,7 @@
     font-size: 26px;
 }
 
-@media (min-width: 200px) and (max-width: 759px){
+@media (min-width: 300px) and (max-width: 759px){
     .logo{
         background-color: #D5EC76;
         width: 100%;
@@ -145,10 +145,6 @@
         width: 50px;
         height: 50px;
         cursor: pointer;
-    }
-    
-    .login-style{
-        margin-top: 5%;
     }
     
     .image-about{
