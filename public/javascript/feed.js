@@ -2,6 +2,7 @@ const database = firebase.database();
 const USER_ID = window.location.search.match(/\?id=(.*)/)[1];
 
 $(document).ready(function() {
+
   getPostsfromDB();
   $(".add-posts").click(addPostsClick);
   $(".order-select-options").change(function(){
@@ -9,28 +10,44 @@ $(document).ready(function() {
     filterBySelectOptions(btnSelect);
   })
   $("#button-logout").click(signOut);
-  
+  publicName()
+
+
+  function publicName() {
+    database.ref('/users/' + USER_ID).once('value')
+    .then(function(snapshot){
+      let childDataName = snapshot.val();
+      $("#user-name").append(`${childDataName.name}`)
+    });
+  };  
+ 
+  function addPostsClick(event) {
+    event.preventDefault();
+    let newPost = $(".posts-input").val();
+    let selectOptions = $(".option-selected").val();
+    let postsFromDB = addPoststoDB(newPost, selectOptions);
+    let favInitial = 0;
+    database.ref('/users/' + USER_ID).once('value')
+    .then(function(snapshot){
+      let childDataName = snapshot.val();
+    createPostList(postsFromDB.key, newPost, favInitial, childDataName.name);
+  });
+    $('#add-post-modal').modal('hide')
+  };
+
   function filterBySelectOptions(btnSelect) {
     $(".posts-list").html("");
     firebase.database().ref("posts/" + USER_ID).orderByChild("selectOptions").equalTo(btnSelect).once("value", function (snapshot) {
       snapshot.forEach(function (childSnapshot) {
         let childKey = childSnapshot.key;
         let childData = childSnapshot.val();
-        createPostList(childKey, childData.text, childData.fav);
-        console.log(btnSelect);
+        database.ref('/users/' + USER_ID).once('value')
+        .then(function(snapshot){
+          let childDataName = snapshot.val();
+        createPostList(childKey, childData.text, childData.fav, childDataName.name);
+        });
       });
-    })
-  };
-
-  function addPostsClick(event) {
-    event.preventDefault();
-    let newPost = $(".posts-input").val();
-    $(".posts-input").val("");
-    let selectOptions = $(".option-selected").val();
-    let postsFromDB = addPoststoDB(newPost, selectOptions);
-    let favInitial = 0;
-    createPostList(postsFromDB.key, newPost, favInitial);
-    $('#add-post-modal').modal('hide')
+    });
   };
 
   function addPoststoDB(text, select){
@@ -45,13 +62,12 @@ $(document).ready(function() {
     database.ref('/posts/' + USER_ID).once('value')
     .then(function(snapshot){
       snapshot.forEach(function(childSnapshot) {
-        database.ref('/users/' + USER_ID).once('value')
-        .then(function(snapshot){
-          let childDataName = snapshot.val();
           let childKey = childSnapshot.key;
           let childData = childSnapshot.val();
-
-        createPostList(childKey, childData.text, childData.fav, childData.name);
+          database.ref('/users/' + USER_ID).once('value')
+          .then(function(snapshot){
+            let childDataName = snapshot.val();
+        createPostList(childKey, childData.text, childData.fav, childDataName.name);
         });
       });
     });
@@ -88,20 +104,13 @@ $(document).ready(function() {
     .catch((error) => {console.error(error)});
   };
 
-
   $(".posts-input").keyup(function() {
     if ($('.posts-input').val() === '' ) {
       $('.add-posts').attr('disabled', true);
       return;
     }
     $('.add-posts').attr('disabled', false);
-
-
   });
-
-
-
-
 
 });
 

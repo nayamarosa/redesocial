@@ -1,26 +1,6 @@
-const database = firebase.database();
-const USER_ID = window.location.search.match(/\?id=(.*)/);
 
 $(document).ready(function showProfile() { 
     
-  database.ref('/users/' + USER_ID).once('value')
-  .then(function(snapshot){
-    let name;
-      let childData = snapshot.val();
-       name = childData.name
-       
-     publicName(name)
-     profileName(name)
-    });
-
-  function profileName(name) {
-  $("#profile-user-name").append(`${name}`)
-  }
-  function publicName(name) {
-    $("#user-name").append(`${name}`)
-  }
-
-
 
 $("#input-b9").on("change", function(event) {
 selectedFile = event.target.files[0];
