@@ -23,55 +23,64 @@
 
 <body>
   <header class="d-flex justify-content-center navbar-style">
-    <nav class="navbar navbar-expand-lg d-flex justify-content-between nav-items">
-      <a class="navbar-brand m-0 p-0 col-10 col-lg-3 logo-feed" href="#">
-        <img src="images/trocaria-logo.png" alt="trocaria">
+    <nav class="navbar navbar-expand-lg navbar-light d-flex justify-content-between nav-items">
+      <a class="navbar-brand" href="#">
+        <img src="images/trocaria-logo.png" alt="" class="logo-feed">
       </a>
       
-      <div class="collapse navbar-collapse d-flex justify-content-between" id="navbarSupportedContent">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <div class="collapse navbar-collapse flex-grow-0 menu-colapse" id="navbarSupportedContent">
         
-        <div class="d-flex col-lg-6">
-          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="PESQUISAR">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">PESQUISAR</button>
+        <div class="d-flex">
+          <input class="form-control mr-sm-2 d-none d-md-block d-lg-none d-lg-block d-xl-none d-xl-block" type="search" placeholder="Search" aria-label="PESQUISAR">
+          <button class="btn btn-outline-success my-2 my-sm-0 d-none d-md-block d-lg-none d-lg-block d-xl-none d-xl-block" type="submit">PESQUISAR</button>
         </div>
         
-        <form class="form-inline my-2 my-lg-0 form-navbar">
-          <ul class="navbar-nav">
-            <li class="nav-item ml-4">
-              <a class="nav-link p-0 navbar-icons" href="#">
-                <img src="icons/notifications.png" alt="notifications">
-              </a>
-            </li>
-            <li class="nav-item ml-4">
-              <a class="nav-link p-0 navbar-icons" href="#">
-                <img src="icons/msg.png" alt="messages">
-              </a>
-            </li>
-            <li class="nav-item ml-4">
-              <a class="nav-link p-0 navbar-icons" href="profile.htm">
-                <img src="icons/config.png" alt="configurations">
-              </a>
-            </li>
-            <li class="nav-bar ml-4">
-              <a class="nav-link p-0 navbar-icons" href="#">
-                <img src="icons/logout.png" alt="configurations" id="button-logout" value="SAIR">
-              </a>
-            </li>
-          </ul>
-        </form>
+        <ul class="navbar-nav p-3">
+          <li class="nav-item d-flex ml-4 pt-2 pb-2 border-li">
+            <a class="nav-link d-flex align-items-center navbar-icons" href="#">
+              <img src="icons/notifications.png" alt="notifications">
+              <p class="ml-3 icons-text concert-font-family font-m">NOTIFICAÇÕES</p>
+            </a>
+          </li>
+          <li class="nav-item ml-4 pt-2 pb-2 border-li">
+            <a class="nav-link d-flex align-items-center navbar-icons" href="#">
+              <img src="icons/msg.png" alt="messages">
+              <p class="ml-3 icons-text concert-font-family font-m">MENSAGEM</p>
+            </a>
+          </li>
+          <li class="nav-item ml-4 pt-2 pb-2 border-li">
+            <a class="nav-link d-flex align-items-center navbar-icons" href="profile.htm">
+              <img src="icons/config.png" alt="configurations">
+              <p class="ml-3 icons-text concert-font-family font-m">CONFIGURAÇÕES</p>
+            </a>
+          </li>
+          <li class="nav-bar ml-4 pt-2 pb-2">
+            <a class="nav-link d-flex align-items-center navbar-icons" href="#">
+              <img src="icons/logout.png" alt="configurations" id="button-logout" value="SAIR">
+              <p class="ml-3 icons-text concert-font-family font-m">SAIR</p>
+            </a>
+          </li>
+        </ul>
       </div>
     </nav>
+    
   </header>
   
   <section class="d-flex justify-content-center">
     <aside class="mt-5 col col-lg-3 d-none d-md-block d-lg-none d-lg-block d-xl-none d-xl-block">
       <section class="rounded-lg aside-content">
-          <div class="image-container">
-              <img src="http://placehold.it/150x150" id="imgProfile" style="width: 100px; height: 100px"
-              class="avatar rounded-circle img-fluid img-thumbnail" alt="avatar" />
-              <div class="middle">
-        <h1 id="user-name"></h1>
-        <figure></figure>
+        <div class="image-container">
+          <img src="http://placehold.it/150x150" id="imgProfile" style="width: 100px; height: 100px"
+          class="avatar rounded-circle img-fluid img-thumbnail" alt="avatar" />
+          <div class="middle">
+            <h1 id="user-name"></h1>
+            <figure></figure>
+          </div>
+        </div>
       </section>
     </aside>
     
@@ -99,79 +108,79 @@
       <section name="post-modal">
         <div class="modal fade" id="add-post-modal" tabindex="-1" role="dialog" 
         aria-labelledby="add-post-modalLabel" aria-hidden="true">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content container d-flex flex-column">
-              <div class="modal-header">
-                <h5 class="concert-font-family" id="add-post-modalLabel">Criar publicação</h5>
-              </div>
-              <div class="modal-body">
-                <textarea name="posts-input" placeholder="O que você gostaria de trocar ou doar?"
-                  class="form-control posts-input"></textarea>
-              </div>
-              <div>
-                <select name="select"
-                  class="btn btn-outline-secondary dropdown-toggle rounded-pill border-0 mb-3 option-selected">
-                  <option value="public" class="post-public">Público</option>
-                  <option value="private" class="post-private">Privado</option>
-                </select>
-              </div>
-              <div class="d-flex flex-column align-items-center">
-                <button type="button"
-                  class="btn rounded-pill border-0 mb-3 concert-font-family font-g add-posts">PUBLICAR</button>
-                <button type="button" class="btn rounded-pill border-0 mb-3 concert-font-family font-m"
-                  data-dismiss="modal">CANCELAR</button>
-              </div>
+        <div class="modal-dialog" role="document">
+          <div class="modal-content container d-flex flex-column">
+            <div class="modal-header">
+              <h5 class="concert-font-family" id="add-post-modalLabel">Criar publicação</h5>
             </div>
+            <div class="modal-body">
+              <textarea name="posts-input" placeholder="O que você gostaria de trocar ou doar?"
+              class="form-control posts-input"></textarea>
+            </div>
+            <div>
+              <select name="select"
+              class="btn btn-outline-secondary dropdown-toggle rounded-pill border-0 mb-3 option-selected">
+              <option value="public" class="post-public">Público</option>
+              <option value="private" class="post-private">Privado</option>
+            </select>
+          </div>
+          <div class="d-flex flex-column align-items-center">
+            <button type="button"
+            class="btn rounded-pill border-0 mb-3 concert-font-family font-g add-posts">PUBLICAR</button>
+            <button type="button" class="btn rounded-pill border-0 mb-3 concert-font-family font-m"
+            data-dismiss="modal">CANCELAR</button>
           </div>
         </div>
-      </section>
-      <section name="remove-modal">
-        <div class="modal fade" id="remove-post-modal" tabindex="-1" role="dialog"
-          aria-labelledby="remove-post-modalLabel" aria-hidden="true">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="concert-font-family" id="remove-post-modalLabel">REMOVER
-                  POST</h5>
-              </div>
-              <div class="modal-body">
-                <h5>Tem certeza que deseja remover este post?</h5>
-              </div>
-              <div class="d-flex flex-column align-items-center">
-                <button type="button" class="btn rounded-pill border-0 mb-3 concert-font-family font-g" data-dismiss="modal">CANCELAR</button>
-                <button type="button" class="btn rounded-pill border-0 mb-3 concert-font-family font-m remove-post">REMOVER</button>
-              </div>
-            </div>
+      </div>
+    </div>
+  </section>
+  <section name="remove-modal">
+    <div class="modal fade" id="remove-post-modal" tabindex="-1" role="dialog"
+    aria-labelledby="remove-post-modalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="concert-font-family" id="remove-post-modalLabel">REMOVER
+            POST</h5>
+          </div>
+          <div class="modal-body">
+            <h5>Tem certeza que deseja remover este post?</h5>
+          </div>
+          <div class="d-flex flex-column align-items-center">
+            <button type="button" class="btn rounded-pill border-0 mb-3 concert-font-family font-g" data-dismiss="modal">CANCELAR</button>
+            <button type="button" class="btn rounded-pill border-0 mb-3 concert-font-family font-m remove-post">REMOVER</button>
           </div>
         </div>
-      </section>
-      <section name="edit-modal">
-        <div class="modal fade" id="update-post-modal" tabindex="-1" role="dialog"
-          aria-labelledby="update-post-modalLabel" aria-hidden="true">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content container d-flex flex-column">
-              <div class="modal-header">
-                <h5 class="concert-font-family" id="update-post-modalLabel">Editar publicação</h5>
-              </div>
-              <div class="modal-body">
-                <textarea id="update-post" name="posts-update" class="form-control posts-input" cols="30" rows="10"></textarea>
-              </div>
-              <div>
-                <select name="select"
-                  class="btn btn-outline-secondary dropdown-toggle rounded-pill border-0 mb-3 option-selected">
-                  <option value="public" class="post-public">Público</option>
-                  <option value="private" class="post-private">Privado</option>
-                </select>
-              </div>
-              <div class="d-flex flex-column align-items-center ">
-                <button type="button" class="btn rounded-pill border-0 mb-3 concert-font-family font-g update-post">PUBLICAR</button>
-                <button type="button" class="btn rounded-pill border-0 mb-3 concert-font-family font-m" data-dismiss="modal">CANCELAR</button>
-              
-              </div> 
-            </div>
-          </div>
+      </div>
+    </div>
+  </section>
+  <section name="edit-modal">
+    <div class="modal fade" id="update-post-modal" tabindex="-1" role="dialog"
+    aria-labelledby="update-post-modalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content container d-flex flex-column">
+        <div class="modal-header">
+          <h5 class="concert-font-family" id="update-post-modalLabel">Editar publicação</h5>
         </div>
-      </section>
+        <div class="modal-body">
+          <textarea id="update-post" name="posts-update" class="form-control posts-input" cols="30" rows="10"></textarea>
+        </div>
+        <div>
+          <select name="select"
+          class="btn btn-outline-secondary dropdown-toggle rounded-pill border-0 mb-3 option-selected">
+          <option value="public" class="post-public">Público</option>
+          <option value="private" class="post-private">Privado</option>
+        </select>
+      </div>
+      <div class="d-flex flex-column align-items-center ">
+        <button type="button" class="btn rounded-pill border-0 mb-3 concert-font-family font-g update-post">PUBLICAR</button>
+        <button type="button" class="btn rounded-pill border-0 mb-3 concert-font-family font-m" data-dismiss="modal">CANCELAR</button>
+        
+      </div> 
+    </div>
+  </div>
+</div>
+</section>
 </main>
 </section>
 

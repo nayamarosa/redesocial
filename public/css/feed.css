@@ -32,13 +32,26 @@
   .nav-items{
     width: 100%;
   }
+
+  .menu-colapse{
+    background-color: #D5EC76;
+    z-index: 1;
+  }
   
-  .logo-feed img{
+  .logo-feed{
     width: 120px;
+  }
+  
+  .border-li{
+    border-bottom: 1px solid #101010;
   }
   
   .navbar-icons img{
     width: 40px;
+  }
+
+  .icons-text{
+    display: inline;
   }
   
   .aside-content{
@@ -117,19 +130,23 @@
 @media (min-width: 760px){
   .navbar-style{
     background-color: #D5EC76;
-    height: 60px;
+    height: 70px;
   }
   
   .nav-items{
     width: 100%;
   }
   
-  .logo-feed img{
+  .logo-feed {
     width: 180px;
   }
   
   .navbar-icons img{
     width: 40px;
+  }
+
+  .icons-text{
+    display: none;
   }
   
   .aside-content{
