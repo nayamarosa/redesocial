@@ -35,11 +35,7 @@ Ao fazer uma versão mobile do site, permite-se que os usuários encontrem, de f
 4ª etapa: prototipagem utilizando a ferramenta Adobe XD. 
 [Vídeo do protótipo](https://www.youtube.com/watch?v=JMhKdfotaNo&feature=youtu.be)
 
-![imagem do protótipo do login](https://trello-attachments.s3.amazonaws.com/5c8feb9a63a889176a828739/5c90d7c439c5bd4e348a0fdf/447406e2bf1d54910b50a366aca852d4/login.JPG)
-
-![imagem do protótipo do registro](https://trello-attachments.s3.amazonaws.com/5c8feb9a63a889176a828739/5c90d7c439c5bd4e348a0fdf/f5892166e8b24af1c3fee31f494298a6/register-final.JPG)
-
-![imagem do protótipo do modal de post](https://trello-attachments.s3.amazonaws.com/5c8feb9a63a889176a828739/5c90d7c439c5bd4e348a0fdf/bfe8233b86de1a7048ede27880fa6dc3/post-final.JPG)
+![imagem do protótipo do login](https://trello-attachments.s3.amazonaws.com/5c8feb9a63a889176a828739/5c90d7c439c5bd4e348a0fdf/447406e2bf1d54910b50a366aca852d4/login.JPG) ![imagem do protótipo do registro](https://trello-attachments.s3.amazonaws.com/5c8feb9a63a889176a828739/5c90d7c439c5bd4e348a0fdf/f5892166e8b24af1c3fee31f494298a6/register-final.JPG) ![imagem do protótipo do modal de post](https://trello-attachments.s3.amazonaws.com/5c8feb9a63a889176a828739/5c90d7c439c5bd4e348a0fdf/bfe8233b86de1a7048ede27880fa6dc3/post-final.JPG)
 
 
 5ª etapa: testes no html com potenciais usuários possibilitaram confirmar a escolha de cores e o tamanho dos botões, assim como, testar a responsividade para diversas telas. Algumas funções ainda não implementadas foram sugeridas, como postar imagens nas publicações do feed.
