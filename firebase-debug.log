@@ -106,3 +106,58 @@
 [debug] [2019-04-10T19:02:36.929Z] <<< HTTP RESPONSE 200
 [info] i  hosting: Serving hosting files from: public
 [info] ✔  hosting: Local server: http://localhost:5000
+[debug] [2019-04-11T03:19:06.805Z] ----------------------------------------------------------------------
+[debug] [2019-04-11T03:19:06.807Z] Command:       /usr/bin/node /usr/bin/firebase serve
+[debug] [2019-04-11T03:19:06.808Z] CLI Version:   6.6.0
+[debug] [2019-04-11T03:19:06.808Z] Platform:      linux
+[debug] [2019-04-11T03:19:06.808Z] Node Version:  v8.15.1
+[debug] [2019-04-11T03:19:06.808Z] Time:          Thu Apr 11 2019 00:19:06 GMT-0300 (-03)
+[debug] [2019-04-11T03:19:06.808Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-04-11T03:19:06.817Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-04-11T03:19:06.818Z] > authorizing via signed-in user
+[debug] [2019-04-11T03:19:06.818Z] [iam] checking project trocaria-11 for permissions ["firebase.projects.get"]
+[debug] [2019-04-11T03:19:06.820Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2019-04-11T03:19:06.820Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2019-04-11T03:19:07.023Z] <<< HTTP RESPONSE 200
+[debug] [2019-04-11T03:19:07.034Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/trocaria-11:testIamPermissions  
+
+[debug] [2019-04-11T03:19:08.004Z] <<< HTTP RESPONSE 200
+[debug] [2019-04-11T03:19:08.009Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/trocaria-11  
+ 
+[debug] [2019-04-11T03:19:08.915Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/home/ana/Google Drive/lab/redesocial'...
+[info] 
+[debug] [2019-04-11T03:19:08.919Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/251335613869/clients/_:getWebAppConfig  
+ 
+[debug] [2019-04-11T03:19:10.303Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] ✔  hosting: Local server: http://localhost:5000
+[debug] [2019-04-11T03:50:41.759Z] ----------------------------------------------------------------------
+[debug] [2019-04-11T03:50:41.762Z] Command:       /usr/bin/node /usr/bin/firebase serve
+[debug] [2019-04-11T03:50:41.763Z] CLI Version:   6.6.0
+[debug] [2019-04-11T03:50:41.763Z] Platform:      linux
+[debug] [2019-04-11T03:50:41.763Z] Node Version:  v8.15.1
+[debug] [2019-04-11T03:50:41.763Z] Time:          Thu Apr 11 2019 00:50:41 GMT-0300 (-03)
+[debug] [2019-04-11T03:50:41.763Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-04-11T03:50:41.774Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-04-11T03:50:41.774Z] > authorizing via signed-in user
+[debug] [2019-04-11T03:50:41.774Z] [iam] checking project trocaria-11 for permissions ["firebase.projects.get"]
+[debug] [2019-04-11T03:50:41.777Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/trocaria-11:testIamPermissions  
+
+[debug] [2019-04-11T03:50:42.762Z] <<< HTTP RESPONSE 200
+[debug] [2019-04-11T03:50:42.765Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/trocaria-11  
+ 
+[debug] [2019-04-11T03:50:43.675Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/home/ana/Google Drive/lab/redesocial'...
+[info] 
+[debug] [2019-04-11T03:50:43.677Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/251335613869/clients/_:getWebAppConfig  
+ 
+[debug] [2019-04-11T03:50:44.140Z] <<< HTTP RESPONSE 200
+[warn] ⚠  hosting: Port 5000 is not available. Trying another port...
+[info] i  hosting: Serving hosting files from: public
+[info] ✔  hosting: Local server: http://localhost:5005
