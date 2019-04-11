@@ -62,7 +62,7 @@ $(document).ready(function() {
     <li class="mb-3 p-3 rounded-lg posts">
       <div class="mb-3 post-text">
         <h6 class="mb-2 concert-font-family font-m">${name}</h6>
-        <p class="mb-3 roboto-font-family font-m">${text}</p>
+        <p class="mb-3 roboto-font-family font-p">${text}</p>
         <i data-toggle="modal" class="update-modal" data-id="${key}" data-message="${text}" data-target="#update-post-modal">
           <img src="icons/edit.png" alt="editar" id="button-logout" value="EDIT" class="mb-3">
         </i>

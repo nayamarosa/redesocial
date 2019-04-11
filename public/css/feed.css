@@ -10,8 +10,12 @@
   margin: 0;
 }
 
-.font-p{
+.font-pp{
   font-size: 12px;
+}
+
+.font-p{
+  font-size: 14px;
 }
 
 .font-m{
@@ -22,7 +26,7 @@
   font-size: 26px;
 }
 
-@media (min-width: 200px) and (max-width: 759px){
+@media (min-width: 300px) and (max-width: 759px){
   .navbar-style{
     background-color: #D5EC76;
     width: 100%;
@@ -32,7 +36,7 @@
   .nav-items{
     width: 100%;
   }
-
+  
   .menu-colapse{
     background-color: #D5EC76;
     z-index: 1;
@@ -49,40 +53,35 @@
   .navbar-icons img{
     width: 40px;
   }
-
+  
   .icons-text{
     display: inline;
   }
   
-  .aside-content{
-    background-color: #C7E44F;
-    height: 70vh;
-  }
-  
   .btn-new-post{
     background-color: #C7E44F;
-    width: 200px;
+    width: 280px;
     height: 50px;
   }
   
-  .btn-new-post:hover{
-    background-color: #CCCCCC;
-  }
-  
-  .textarea-style{
-    resize: none;
-    width: 400px;
-    height: 150px;
-  }
-  
-  .add-posts{
+  .btn-add-change{
     background-color: #C7E44F;
     width: 180px;
     height: 50px;
   }
   
-  .add-posts:hover{
+  .btn-add-change:hover{
     background-color: #CCCCCC;
+  }
+  
+  .btn-cancel{
+    background-color: #CCCCCC;
+    width: 100px;
+    height: 35px;
+  }
+  
+  .btn-cancel:hover{
+    background-color: #D5EC76;
   }
   
   .cancel-add-posts{
@@ -91,27 +90,40 @@
     height: 35px;
   }
   
+  .space-title-feed{
+    width: 320px;
+  }
+  
+  .space-title-feed h5{
+    width: 150px;
+  }
+  
   .posts-list li{
     list-style: none;
+    width: 320px;;
   }
   
   .posts{
     border: 1px solid #CCCCCC;
-    margin-bottom: 1rem;
+  }
+  
+  .post-text{
+    border-bottom: 1px solid #CCCCCC;
   }
   
   .favorite-modal img{
-    width: 30px;
+    width: 25px;
     cursor: pointer;
   }
   
   .update-modal img{
-    width: 30px;
+    width: 25px;
+    margin-right: 15px;
     cursor: pointer;
   }
   
   .remove-modal img{
-    width: 30px;
+    width: 25px;
     cursor: pointer;
   }
   
@@ -124,6 +136,7 @@
     padding: 12px;
     position: fixed;
     bottom: 0;
+    z-index: 1;
   }
 }
 
@@ -140,17 +153,17 @@
   .logo-feed {
     width: 180px;
   }
-
-.btn-search{
-  width: 50px;
-  border-radius: 50%;
-  background-color: #C7E44F;
-}
-
-.btn-search:hover{
-  background-color: #CCCCCC;
-}
-
+  
+  .btn-search{
+    width: 50px;
+    border-radius: 50%;
+    background-color: #C7E44F;
+  }
+  
+  .btn-search:hover{
+    background-color: #CCCCCC;
+  }
+  
   .btn-search img{
     width: 20px;
   }
@@ -158,7 +171,7 @@
   .navbar-icons img{
     width: 40px;
   }
-
+  
   .icons-text{
     display: none;
   }
@@ -194,11 +207,11 @@
     width: 100px;
     height: 35px;
   }
-
+  
   .btn-cancel:hover{
     background-color: #D5EC76;
   }
-
+  
   .space-title-feed{
     width: 600px;
   }
@@ -211,7 +224,7 @@
   .posts{
     border: 1px solid #CCCCCC;
   }
-
+  
   .post-text{
     border-bottom: 1px solid #CCCCCC;
   }
@@ -219,16 +232,37 @@
   .update-modal img{
     width: 30px;
     cursor: pointer;
+    transition: 0.5s ease-in-out;
+  }
+  
+  .update-modal img:hover{
+    background-color: #D5EC76;
+    border-radius: 50%;
+    width: 30px;
   }
   
   .remove-modal img{
     width: 30px;
     cursor: pointer;
+    transition: 0.5s ease-in-out;
   }
-    
+  
+  .remove-modal img:hover{
+    background-color: #CCCCCC;
+    border-radius: 50%;
+    width: 30px;
+  }
+  
   .favorite-modal img{
     width: 30px;
     cursor: pointer;
+    transition: 0.5s ease-in-out;
+  }
+  
+  .favorite-modal img:hover{
+    background-color: #f7338e;
+    border-radius: 50%;
+    width: 30px;
   }
   
   .footer-style{
@@ -240,5 +274,6 @@
     padding: 12px;
     position: fixed;
     bottom: 0;
+    z-index: 1;
   }
 }
