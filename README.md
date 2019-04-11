@@ -8,7 +8,11 @@ Atualmente os usuários dispoem de serviços de redes sociais para realizar troc
 
 Nesse intuito a TROCARIA, uma rede social para trocas, viabiliza o contato e os acordos dos diversos interesses de seus usuários, permitindo realizar trocas de objetos, doações e permutas de serviços. 
 
-Os principais utilizadores foram definidos por três personas, criadas para exemplificar as dificuldades e demandas possíveis para a rede social. Aqui é possível consultar as personas [links personas(
+Os principais utilizadores foram definidos por três personas, criadas para exemplificar as dificuldades e demandas possíveis para a rede social. 
+
+Aqui é possível consultar as personas 
+[links persona1](https://trello-attachments.s3.amazonaws.com/5c8feb9a63a889176a828739/5c90d7c439c5bd4e348a0fdf/f4270b3747f2bceeeaa148b9ef3760ab/Nicole-Almeida.png)
+[link persona2](https://trello-attachments.s3.amazonaws.com/5c8feb9a63a889176a828739/5c90d7c439c5bd4e348a0fdf/f4270b3747f2bceeeaa148b9ef3760ab/Nicole-Almeida.png)
 
 
 ### Mobile First
