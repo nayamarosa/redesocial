@@ -140,6 +140,20 @@
   .logo-feed {
     width: 180px;
   }
+
+.btn-search{
+  width: 50px;
+  border-radius: 50%;
+  background-color: #C7E44F;
+}
+
+.btn-search:hover{
+  background-color: #CCCCCC;
+}
+
+  .btn-search img{
+    width: 20px;
+  }
   
   .navbar-icons img{
     width: 40px;
@@ -152,6 +166,7 @@
   .aside-content{
     background-color: #C7E44F;
     height: 70vh;
+    text-align: center;
   }
   
   .btn-new-post{

@@ -10,7 +10,6 @@ $(document).ready(function() {
   })
   $("#button-logout").click(signOut);
   
-  
   function filterBySelectOptions(btnSelect) {
     $(".posts-list").html("");
     firebase.database().ref("posts/" + USER_ID).orderByChild("selectOptions").equalTo(btnSelect).once("value", function (snapshot) {
@@ -22,7 +21,7 @@ $(document).ready(function() {
       });
     })
   };
-  
+
   function addPostsClick(event) {
     event.preventDefault();
     let newPost = $(".posts-input").val();
@@ -33,7 +32,7 @@ $(document).ready(function() {
     createPostList(postsFromDB.key, newPost, favInitial);
     $('#add-post-modal').modal('hide')
   };
-  
+
   function addPoststoDB(text, select){
     return database.ref("/posts/" + USER_ID).push({
       text: text,
@@ -41,7 +40,7 @@ $(document).ready(function() {
       fav:0
     });
   };
-  
+
   function getPostsfromDB() {
     database.ref('/posts/' + USER_ID).once('value')
     .then(function(snapshot){
@@ -51,13 +50,13 @@ $(document).ready(function() {
           let childDataName = snapshot.val();
           let childKey = childSnapshot.key;
           let childData = childSnapshot.val();
-        
-        createPostList(childKey, childData.text, childData.fav, childDataName.name ); 
+
+        createPostList(childKey, childData.text, childData.fav, childData.name);
         });
       });
     });
   };
-  
+
   function createPostList(key, text, fav, name) {
     $(".posts-list").append(`
     <li class="posts">
@@ -82,8 +81,7 @@ $(document).ready(function() {
     updatePosts();
     favoriteCount(key);
   };
- 
-    
+
   function signOut() {
     firebase.auth().signOut()
     .then(() => {window.location = "index.html"})
@@ -91,12 +89,19 @@ $(document).ready(function() {
   };
 
 
+  $(".posts-input").keyup(function() {
+    if ($('.posts-input').val() === '' ) {
+      $('.add-posts').attr('disabled', true);
+      return;
+    }
+    $('.add-posts').attr('disabled', false);
 
 
-//eita function validateContent() => (createPostList().length >= 0) ? '$('nomedobotão').attr('disabled', 'disabled'); ' : '$('button').removeAttr('disabled')';
+  });
 
 
-// showProfile()
-  
+
+
+
 });
 

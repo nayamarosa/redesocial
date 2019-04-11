@@ -35,8 +35,10 @@
       <div class="collapse navbar-collapse flex-grow-0 menu-colapse" id="navbarSupportedContent">
         
         <div class="d-flex">
-          <input class="form-control mr-sm-2 d-none d-md-block d-lg-none d-lg-block d-xl-none d-xl-block" type="search" placeholder="Search" aria-label="PESQUISAR">
-          <button class="btn btn-outline-success my-2 my-sm-0 d-none d-md-block d-lg-none d-lg-block d-xl-none d-xl-block" type="submit">PESQUISAR</button>
+          <input class="form-control mr-sm-2 d-none d-md-block d-lg-none d-lg-block d-xl-none d-xl-block rounded-pill border-0" type="search" placeholder="Pesquisar" aria-label="PESQUISAR">
+          <button class="btn btn-outline-success my-2 my-sm-0 d-none d-md-block d-lg-none d-lg-block d-xl-none d-xl-block border-0 p-1 btn-search" type="submit">
+            <img src="icons/search.png" alt="pesquisar">
+          </button>
         </div>
         
         <ul class="navbar-nav p-3">
@@ -72,13 +74,12 @@
   
   <section class="d-flex justify-content-center">
     <aside class="mt-5 col col-lg-3 d-none d-md-block d-lg-none d-lg-block d-xl-none d-xl-block">
-      <section class="rounded-lg aside-content">
+      <section class="rounded-lg p-5 aside-content">
         <div class="image-container">
           <img src="http://placehold.it/150x150" id="imgProfile" style="width: 100px; height: 100px"
           class="avatar rounded-circle img-fluid img-thumbnail" alt="avatar" />
           <div class="middle">
-            <h1 id="user-name"></h1>
-            <figure></figure>
+            <h1 id="user-name" class="concert-font-family"></h1>
           </div>
         </div>
       </section>
@@ -108,12 +109,30 @@
       <section name="post-modal">
         <div class="modal fade" id="add-post-modal" tabindex="-1" role="dialog" 
         aria-labelledby="add-post-modalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content container d-flex flex-column">
-            <div class="modal-header">
-              <h5 class="concert-font-family" id="add-post-modalLabel">Criar publicação</h5>
+          <div class="modal-dialog" role="document">
+            <div class="modal-content container d-flex flex-column">
+              <div class="modal-header">
+                <h5 class="concert-font-family" id="add-post-modalLabel">Criar publicação</h5>
+              </div>
+              <div class="modal-body">
+                <textarea  placeholder="O que você gostaria de trocar ou doar?"
+                  class="form-control posts-input"></textarea>
+              </div>
+              <div>
+                <select name="select"
+                  class="btn btn-outline-secondary dropdown-toggle rounded-pill border-0 mb-3 option-selected">
+                  <option value="public" class="post-public">Público</option>
+                  <option value="private" class="post-private">Privado</option>
+                </select>
+              </div>
+              <div class="d-flex flex-column align-items-center">
+                <button type="button"
+                  class="btn rounded-pill border-0 mb-3 concert-font-family font-g add-posts" disabled>PUBLICAR</button>
+                <button type="button" class="btn rounded-pill border-0 mb-3 concert-font-family font-m"
+                  data-dismiss="modal">CANCELAR</button>
+              </div>
             </div>
-            <div class="modal-body">
+            <!-- <div class="modal-body">
               <textarea name="posts-input" placeholder="O que você gostaria de trocar ou doar?"
               class="form-control posts-input"></textarea>
             </div>
@@ -131,9 +150,9 @@
             data-dismiss="modal">CANCELAR</button>
           </div>
         </div>
-      </div>
-    </div>
+      </div> -->
   </section>
+
   <section name="remove-modal">
     <div class="modal fade" id="remove-post-modal" tabindex="-1" role="dialog"
     aria-labelledby="remove-post-modalLabel" aria-hidden="true">
