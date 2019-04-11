@@ -59,23 +59,23 @@ $(document).ready(function() {
 
   function createPostList(key, text, fav, name) {
     $(".posts-list").append(`
-    <li class="posts">
-    <div>
-    <span>${name}</span>
-    <span>${text}</span>
-    <i data-toggle="modal" class="update-modal" data-id="${key}" data-message="${text}" data-target="#update-post-modal">
-    <img src="icons/edit.png" alt="editar" id="button-logout" value="EDIT">
-    </i>
-    <i data-toggle="modal" class="remove-modal" data-id="${key}" data-target="#remove-post-modal">
-    <img src="icons/delete.png" alt="remover" id="button-logout" value="REMOVE">
-    </i>
-    </div>
-    <div>
-    <i data-toggle="modal" class="favorite-modal" data-id="${key}" data-target="#favorite-post-modal">
-    <img src="icons/like.png" alt="like" id="button-logout" value="LIKE">
-    </i>
-    <i data-toggle="modal" class="favorite-count-modal roboto-font-family font-p" data-id="${key}" data-target="#favorite-count-modal"> ${fav}</i>
-    </div>
+    <li class="mb-3 p-3 rounded-lg posts">
+      <div class="mb-3 post-text">
+        <h6 class="mb-2 concert-font-family font-m">${name}</h6>
+        <p class="mb-3 roboto-font-family font-m">${text}</p>
+        <i data-toggle="modal" class="update-modal" data-id="${key}" data-message="${text}" data-target="#update-post-modal">
+          <img src="icons/edit.png" alt="editar" id="button-logout" value="EDIT" class="mb-3">
+        </i>
+        <i data-toggle="modal" class="remove-modal" data-id="${key}" data-target="#remove-post-modal">
+          <img src="icons/delete.png" alt="remover" id="button-logout" value="REMOVE" class="mb-3">
+        </i>
+      </div>
+      <div>
+        <i data-toggle="modal" class="mt-3 favorite-modal" data-id="${key}" data-target="#favorite-post-modal">
+          <img src="icons/like.png" alt="like" id="button-logout" value="LIKE">
+        </i>
+        <i data-toggle="modal" class="favorite-count-modal roboto-font-family font-p" data-id="${key}" data-target="#favorite-count-modal"> ${fav}</i>
+      </div>
     </li> `);
     removePosts();
     updatePosts();

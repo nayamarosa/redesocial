@@ -179,34 +179,41 @@
     background-color: #CCCCCC;
   }
   
-  .add-posts{
+  .btn-add-change{
     background-color: #C7E44F;
     width: 180px;
     height: 50px;
   }
   
-  .add-posts:hover{
+  .btn-add-change:hover{
     background-color: #CCCCCC;
   }
   
-  .cancel-add-posts{
+  .btn-cancel{
     background-color: #CCCCCC;
     width: 100px;
     height: 35px;
   }
+
+  .btn-cancel:hover{
+    background-color: #D5EC76;
+  }
+
+  .space-title-feed{
+    width: 600px;
+  }
   
   .posts-list li{
     list-style: none;
+    width: 600px;
   }
   
   .posts{
     border: 1px solid #CCCCCC;
-    margin-bottom: 1rem;
   }
-  
-  .favorite-modal img{
-    width: 30px;
-    cursor: pointer;
+
+  .post-text{
+    border-bottom: 1px solid #CCCCCC;
   }
   
   .update-modal img{
@@ -215,6 +222,11 @@
   }
   
   .remove-modal img{
+    width: 30px;
+    cursor: pointer;
+  }
+    
+  .favorite-modal img{
     width: 30px;
     cursor: pointer;
   }
