@@ -77,13 +77,15 @@
     
     <aside class="mt-5 col col-lg-3 d-none d-md-block d-lg-none d-lg-block d-xl-none d-xl-block">
       <section class="rounded-lg p-5 aside-content">
-        <div class="image-container">
-          <img src="http://placehold.it/150x150" id="imgProfile" style="width: 100px; height: 100px"
-          class="avatar rounded-circle img-fluid img-thumbnail" alt="avatar" />
-          <div class="middle">
-            <h1 id="user-name" class="concert-font-family"></h1>
+        <div class="image-container d-flex flex-column align-items-center">
+          <img src="http://placehold.it/150x150" class="avatar rounded-circle img-fluid img-thumbnail" alt="avatar">
+          <div class="position-absolute align-middle">
+              <input type="button" class="btn rounded-pill d-flex justify-content-center 
+              align-items-center border-0 concert-font-family font-p" id="btnChangePicture" value="Editar" />
+              <input type="file" style="display: none;"  id="profilePicture" name="file" />
           </div>
         </div>
+        <h1 id="user-name" class="concert-font-family"></h1>
       </section>
     </aside>
     
