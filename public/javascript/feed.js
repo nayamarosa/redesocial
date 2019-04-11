@@ -58,7 +58,7 @@ $(document).ready(function() {
   };
 
   function createPostList(key, text, fav, name) {
-    $(".posts-list").append(`
+    $(".posts-list").prepend(`
     <li class="mb-3 p-3 rounded-lg posts">
       <div class="mb-3 post-text">
         <h6 class="mb-2 concert-font-family font-m">${name}</h6>
