@@ -59,7 +59,7 @@ $(document).ready(function() {
   };
   
   function createPostList(key, text, fav, name) {
-    $(".posts-list").append(`
+    $(".posts-list").prepend(`
     <li class="posts">
     <div>
     <span>${name}</span>
