@@ -1,4 +1,4 @@
-var config = {
+const config = {
   apiKey: "AIzaSyBxQLxwyLDkyKpfReJmRZZwBudnJZQ8W5U",
   authDomain: "trocaria-11.firebaseapp.com",
   databaseURL: "https://trocaria-11.firebaseio.com",
