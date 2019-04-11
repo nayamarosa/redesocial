@@ -11,8 +11,9 @@ Nesse intuito a TROCARIA, uma rede social para trocas, viabiliza o contato e os 
 Os principais utilizadores foram definidos por três personas, criadas para exemplificar as dificuldades e demandas possíveis para a rede social. 
 
 Aqui é possível consultar as personas 
-[links persona1](https://trello-attachments.s3.amazonaws.com/5c8feb9a63a889176a828739/5c90d7c439c5bd4e348a0fdf/f4270b3747f2bceeeaa148b9ef3760ab/Nicole-Almeida.png)
-[link persona2](https://trello-attachments.s3.amazonaws.com/5c8feb9a63a889176a828739/5c90d7c439c5bd4e348a0fdf/f4270b3747f2bceeeaa148b9ef3760ab/Nicole-Almeida.png)
+[Nicole Almeida](https://trello-attachments.s3.amazonaws.com/5c8feb9a63a889176a828739/5c90d7c439c5bd4e348a0fdf/f4270b3747f2bceeeaa148b9ef3760ab/Nicole-Almeida.png)
+[Isabella Santos](https://trello-attachments.s3.amazonaws.com/5c8feb9a63a889176a828739/5c90d7c439c5bd4e348a0fdf/417201d58469047c340555c76e6d9638/Isabella-Santos.png)
+[Vitória Araujo](https://trello-attachments.s3.amazonaws.com/5c8feb9a63a889176a828739/5c90d7c439c5bd4e348a0fdf/7dd31ce4e057277e8ad9c774ac4bfc4a/Vit%C3%B3ria_Ara%C3%BAjo.png)
 
 
 ### Mobile First
@@ -34,12 +35,11 @@ Ao fazer uma versão mobile do site, permite-se que os usuários encontrem, de f
 4ª etapa: prototipagem utilizando a ferramenta Adobe XD. 
 [Vídeo do protótipo](https://www.youtube.com/watch?v=JMhKdfotaNo&feature=youtu.be)
 
-[imagem do protótipo do login](https://trello-attachments.s3.amazonaws.com/5c8feb9a63a889176a828739/5c90d7c439c5bd4e348a0fdf/447406e2bf1d54910b50a366aca852d4/login.JPG)
+![imagem do protótipo do login](https://trello-attachments.s3.amazonaws.com/5c8feb9a63a889176a828739/5c90d7c439c5bd4e348a0fdf/447406e2bf1d54910b50a366aca852d4/login.JPG)
 
+![imagem do protótipo do registro](https://trello-attachments.s3.amazonaws.com/5c8feb9a63a889176a828739/5c90d7c439c5bd4e348a0fdf/f5892166e8b24af1c3fee31f494298a6/register-final.JPG)
 
-[imagem do protótipo do registro](https://trello-attachments.s3.amazonaws.com/5c8feb9a63a889176a828739/5c90d7c439c5bd4e348a0fdf/f5892166e8b24af1c3fee31f494298a6/register-final.JPG)
-
-[imagem do protótipo do modal de post](https://trello-attachments.s3.amazonaws.com/5c8feb9a63a889176a828739/5c90d7c439c5bd4e348a0fdf/bfe8233b86de1a7048ede27880fa6dc3/post-final.JPG)
+![imagem do protótipo do modal de post](https://trello-attachments.s3.amazonaws.com/5c8feb9a63a889176a828739/5c90d7c439c5bd4e348a0fdf/bfe8233b86de1a7048ede27880fa6dc3/post-final.JPG)
 
 
 5ª etapa: testes no html com potenciais usuários possibilitaram confirmar a escolha de cores e o tamanho dos botões, assim como, testar a responsividade para diversas telas. Algumas funções ainda não implementadas foram sugeridas, como postar imagens nas publicações do feed.
@@ -68,11 +68,11 @@ A validação dos dados no momento do registro garante que o os dados cadastrado
 Foi utilizado o Firebase para autenticação, banco de dados e armazenamento. 
 Usamos HTML5, CSS3, Bootstrap 4, JavaScript e Jquery para o desenvolvimento.
 
-[imagem da tela de login](https://trello-attachments.s3.amazonaws.com/5c8feb9a63a889176a828739/5c8ff47460d21317aba3e1a1/3a7754c9d7c9b52f5f6bbd77b99bd0ff/tela_login.png)
+![imagem da tela de login](https://trello-attachments.s3.amazonaws.com/5c8feb9a63a889176a828739/5c8ff47460d21317aba3e1a1/3a7754c9d7c9b52f5f6bbd77b99bd0ff/tela_login.png)
  
-[imagem da tela de login com modal de registro](https://trello-attachments.s3.amazonaws.com/5c8feb9a63a889176a828739/5c8ff47460d21317aba3e1a1/291d89f063bfffe29bd9c53b88469bb4/registro.png)
+![imagem da tela de login com modal de registro](https://trello-attachments.s3.amazonaws.com/5c8feb9a63a889176a828739/5c8ff47460d21317aba3e1a1/291d89f063bfffe29bd9c53b88469bb4/registro.png)
 
-[imagem da tela de feed](https://trello-attachments.s3.amazonaws.com/5c8feb9a63a889176a828739/5c8ff47460d21317aba3e1a1/7e476c159ef455f4ccf53c86e2ab5ffd/feed.png)
+![imagem da tela de feed](https://trello-attachments.s3.amazonaws.com/5c8feb9a63a889176a828739/5c8ff47460d21317aba3e1a1/7e476c159ef455f4ccf53c86e2ab5ffd/feed.png)
 
 
 ## Referências
