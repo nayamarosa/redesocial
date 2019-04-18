@@ -1,4 +1,4 @@
-function updatePosts(){
+function addHandlerUpdatePosts(){
   let message;
   $(".update-modal").unbind().click(function() {
     

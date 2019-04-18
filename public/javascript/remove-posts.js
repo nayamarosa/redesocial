@@ -1,4 +1,4 @@
-function removePosts(){
+function addHandlerRemovePosts(){
     $(".remove-modal").click(function() {
         
         let key = $(this).data("id");

@@ -78,9 +78,9 @@ $(document).ready(function() {
     <i data-toggle="modal" class="favorite-count-modal roboto-font-family font-p" data-id="${key}" data-target="#favorite-count-modal"> ${fav}</i>
     </div>
     </li> `);
-    removePosts();
-    updatePosts();
-    favoriteCount(key);
+    addHandlerRemovePosts();
+    addHandlerUpdatePosts();
+    addHandlerFavoriteCount(key);
   };
  
     
