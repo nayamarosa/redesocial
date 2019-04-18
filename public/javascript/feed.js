@@ -98,5 +98,5 @@ $(document).ready(function() {
 
 // showProfile()
   
-});
+})
 
